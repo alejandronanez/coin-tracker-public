@@ -1,0 +1,261 @@
+<Layouts.app
+  flash={@flash}
+  current_scope={@current_scope}
+  page_title={@page_title}
+  current_path={@current_path}
+>
+  <.form for={@form} id="position-form" phx-change="validate" phx-submit="save">
+    <div class="space-y-12">
+      <div class="border-b border-zinc-900/10 pb-12 dark:border-white/10">
+        <h2 class="text-base/7 font-semibold text-zinc-900 dark:text-white">
+          {gettext("Position Details")}
+        </h2>
+        <p class="mt-1 text-sm/6 text-zinc-600 dark:text-zinc-400">
+          {gettext("Create a new trading position to track your investments")}
+        </p>
+
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-2">
+            <.input
+              field={@form[:symbol]}
+              type="text"
+              label={gettext("Symbol")}
+              placeholder="ETH"
+              description={gettext("The cryptocurrency symbol you want to track")}
+              required
+            />
+          </div>
+
+          <div class="sm:col-span-2">
+            <.input
+              field={@form[:exchange]}
+              type="select"
+              label={gettext("Exchange")}
+              options={@exchange_options}
+              description={gettext("The exchange to fetch price data from")}
+              required
+            />
+          </div>
+
+          <div class="sm:col-span-3">
+            <.input
+              field={@form[:current_threshold_zone]}
+              type="text"
+              inputmode="decimal"
+              label={gettext("Alert Every %")}
+              placeholder="2"
+              description={gettext("Alert frequency (e.g., 2 for 2%, 4%, 6%...)")}
+              required
+            />
+          </div>
+
+          <div class="sm:col-span-3">
+            <.input
+              field={@form[:entry_price]}
+              type="text"
+              inputmode="decimal"
+              label={gettext("Entry Price")}
+              placeholder="0.00000000"
+              description={gettext("Your entry price for this position")}
+              required
+            />
+          </div>
+
+          <div class="sm:col-span-3">
+            <.input
+              field={@form[:amount_invested]}
+              type="text"
+              inputmode="decimal"
+              label={gettext("Amount Invested")}
+              placeholder="Optional - for PnL tracking"
+              description={gettext("Dollar amount invested (optional)")}
+            />
+          </div>
+
+          <div class="sm:col-span-3">
+            <.input
+              field={@form[:stop_loss_percent]}
+              type="text"
+              inputmode="decimal"
+              label={gettext("Stop Loss %")}
+              placeholder="-10"
+              description={gettext("Positive values are auto-converted to negative")}
+              required
+              phx-hook="NegativeInput"
+            />
+          </div>
+
+          <div class="sm:col-span-3">
+            <.input
+              field={@form[:take_profit_percent]}
+              type="text"
+              inputmode="decimal"
+              label={gettext("Take Profit %")}
+              placeholder="20"
+              description={gettext("Positive value (e.g., 20 for 20% above entry)")}
+              required
+            />
+          </div>
+
+          <%!-- Preview Card - Shows calculated prices when all values are present --%>
+          <div :if={@preview_prices} class="sm:col-span-6 mt-2">
+            <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10">
+              <div class="absolute inset-0 bg-grid-gray-100/50 dark:bg-grid-gray-700/50 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
+              </div>
+
+              <div class="relative">
+                <div class="flex items-center gap-2 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5 text-zinc-500 dark:text-zinc-400"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4Zm12 4a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM4 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm13-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM1.75 14.5a.75.75 0 0 0 0 1.5c4.417 0 8.693.603 12.749 1.73 1.111.309 2.251-.512 2.251-1.696v-.784a.75.75 0 0 0-1.5 0v.784a.272.272 0 0 1-.35.25A49.043 49.043 0 0 0 1.75 14.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h3 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                    {gettext("Order Preview")}
+                  </h3>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <%!-- Take Profit Preview --%>
+                  <button
+                    type="button"
+                    id="copy-take-profit-new"
+                    phx-hook="CopyToClipboard"
+                    data-copy-value={format_price(@preview_prices.take_profit)}
+                    class="group relative w-full text-left rounded-lg bg-white dark:bg-zinc-800 p-4 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 transition-all hover:shadow-md hover:ring-green-300 dark:hover:ring-green-700 cursor-pointer active:scale-[0.98] touch-manipulation"
+                    title={gettext("Tap to copy price")}
+                  >
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 rounded-lg bg-green-50 dark:bg-green-900/20 p-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="w-5 h-5 text-green-600 dark:text-green-400"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1 2.75A.75.75 0 0 1 1.75 2h10.5a.75.75 0 0 1 0 1.5H2.5v13.75a.75.75 0 0 1-1.5 0V2.75Zm14.28 9.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L17.81 13H10a.75.75 0 0 0 0 1.5h7.81l-1.78 1.78a.75.75 0 1 0 1.06 1.06l3.25-3.25a.75.75 0 0 0 0-1.06l-3.25-3.25a.75.75 0 0 0-1.06 0Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                          {gettext("Take Profit Price")}
+                        </p>
+                        <div class="flex items-center gap-2 mt-1">
+                          <p class="text-lg font-semibold tabular-nums text-zinc-900 dark:text-white">
+                            ${format_price(@preview_prices.take_profit)}
+                          </p>
+                          <.icon
+                            name="hero-clipboard-document"
+                            class="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors"
+                          />
+                          <span
+                            id="copy-take-profit-new-feedback"
+                            phx-update="ignore"
+                            data-copy-feedback
+                            class="opacity-0 text-xs font-medium text-green-600 dark:text-green-400 transition-opacity duration-200"
+                          >
+                            {gettext("Copied!")}
+                          </span>
+                        </div>
+                        <p class="mt-0.5 text-xs font-medium text-green-600 dark:text-green-400 tabular-nums">
+                          <%= if @preview_prices.take_profit_pnl do %>
+                            {format_pnl(@preview_prices.take_profit_pnl)} ({format_pnl_percent(
+                              @preview_prices.take_profit_percent
+                            )})
+                          <% else %>
+                            {format_pnl_percent(@preview_prices.take_profit_percent)}
+                          <% end %>
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+
+                  <%!-- Stop Loss Preview --%>
+                  <button
+                    type="button"
+                    id="copy-stop-loss-new"
+                    phx-hook="CopyToClipboard"
+                    data-copy-value={format_price(@preview_prices.stop_loss)}
+                    class="group relative w-full text-left rounded-lg bg-white dark:bg-zinc-800 p-4 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 transition-all hover:shadow-md hover:ring-red-300 dark:hover:ring-red-700 cursor-pointer active:scale-[0.98] touch-manipulation"
+                    title={gettext("Tap to copy price")}
+                  >
+                    <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0 rounded-lg bg-red-50 dark:bg-red-900/20 p-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="w-5 h-5 text-red-600 dark:text-red-400"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1 2.75A.75.75 0 0 1 1.75 2h10.5a.75.75 0 0 1 0 1.5H2.5v13.75a.75.75 0 0 1-1.5 0V2.75Zm14.28 2.53a.75.75 0 0 0-1.06-1.06L10 8.44 7.28 5.72a.75.75 0 0 0-1.06 1.06l3.25 3.25a.75.75 0 0 0 1.06 0l4.75-4.75Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                          {gettext("Stop Loss Price")}
+                        </p>
+                        <div class="flex items-center gap-2 mt-1">
+                          <p class="text-lg font-semibold tabular-nums text-zinc-900 dark:text-white">
+                            ${format_price(@preview_prices.stop_loss)}
+                          </p>
+                          <.icon
+                            name="hero-clipboard-document"
+                            class="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors"
+                          />
+                          <span
+                            id="copy-stop-loss-new-feedback"
+                            phx-update="ignore"
+                            data-copy-feedback
+                            class="opacity-0 text-xs font-medium text-red-600 dark:text-red-400 transition-opacity duration-200"
+                          >
+                            {gettext("Copied!")}
+                          </span>
+                        </div>
+                        <p class="mt-0.5 text-xs font-medium text-red-600 dark:text-red-400 tabular-nums">
+                          <%= if @preview_prices.stop_loss_pnl do %>
+                            {format_pnl(@preview_prices.stop_loss_pnl)} ({format_pnl_percent(
+                              @preview_prices.stop_loss_percent
+                            )})
+                          <% else %>
+                            {format_pnl_percent(@preview_prices.stop_loss_percent)}
+                          <% end %>
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex items-center justify-end gap-x-6">
+      <.link
+        navigate={~p"/positions"}
+        class="text-sm/6 font-semibold text-zinc-900 dark:text-white"
+      >
+        {gettext("Cancel")}
+      </.link>
+      <.button type="submit" phx-disable-with={gettext("Creating...")}>
+        {gettext("Create Position")}
+      </.button>
+    </div>
+  </.form>
+</Layouts.app>

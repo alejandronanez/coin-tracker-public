@@ -1,0 +1,232 @@
+<Layouts.app
+  flash={@flash}
+  current_scope={@current_scope}
+  page_title={@page_title}
+  current_path={@current_path}
+>
+  <div class="py-6">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold text-zinc-900 dark:text-white">
+          {gettext("Historical Signals")}
+        </h1>
+        <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+          {gettext("Every symbol that has appeared in the top 10, with full occurrence history.")}
+        </p>
+      </div>
+
+      <%!-- Upsell banner for non-pro users --%>
+      <%= if not @is_pro and @active_signal_count > 0 do %>
+        <div
+          id="pro-upsell-banner"
+          class="mb-6 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 p-5"
+        >
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center gap-3">
+              <.icon name="hero-lock-closed" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <span class="text-sm font-medium text-blue-900 dark:text-blue-100">
+                {ngettext(
+                  "There is 1 active signal right now. Upgrade to Pro to unlock real-time access.",
+                  "There are %{count} active signals right now. Upgrade to Pro to unlock real-time access.",
+                  @active_signal_count
+                )}
+              </span>
+            </div>
+            <.link
+              navigate={~p"/upgrade"}
+              class="text-sm font-semibold text-blue-700 dark:text-blue-400 hover:underline"
+            >
+              {gettext("Upgrade to Pro")} &rarr;
+            </.link>
+          </div>
+        </div>
+      <% end %>
+
+      <%!-- Search box --%>
+      <div id="historical-search" class="mb-4">
+        <form phx-change="search" phx-submit="search" id="historical-search-form">
+          <.input
+            type="text"
+            name="search"
+            value={@search}
+            placeholder={gettext("Search by symbol or name...")}
+            phx-debounce="300"
+            autocomplete="off"
+            id="symbol-search-input"
+            class="w-full rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-2.5 text-sm text-zinc-900 dark:text-white placeholder-zinc-500 dark:placeholder-zinc-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </form>
+      </div>
+
+      <%!-- Status filter tabs (pro users only) --%>
+      <%= if @is_pro do %>
+        <div id="status-filter" class="flex items-center gap-2 mb-4">
+          <button
+            phx-click="filter_status"
+            phx-value-status="all"
+            id="filter-all"
+            class={[
+              "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+              if(@status_filter == "all",
+                do: "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900",
+                else:
+                  "bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
+              )
+            ]}
+          >
+            {gettext("All")}
+            <span class={[
+              "ml-1.5 inline-flex items-center justify-center min-w-[1.25rem] px-1 py-0.5 rounded-full text-xs",
+              if(@status_filter == "all",
+                do: "bg-white/20 text-white dark:bg-zinc-900/30 dark:text-zinc-900",
+                else: "bg-zinc-200 text-zinc-500 dark:bg-zinc-700 dark:text-zinc-400"
+              )
+            ]}>
+              {@active_count + @inactive_count}
+            </span>
+          </button>
+          <button
+            phx-click="filter_status"
+            phx-value-status="active"
+            id="filter-active"
+            class={[
+              "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+              if(@status_filter == "active",
+                do: "bg-emerald-600 text-white dark:bg-emerald-500 dark:text-white",
+                else:
+                  "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-900/20 dark:text-emerald-400 dark:hover:bg-emerald-900/30"
+              )
+            ]}
+          >
+            {gettext("Active")}
+            <span class={[
+              "ml-1.5 inline-flex items-center justify-center min-w-[1.25rem] px-1 py-0.5 rounded-full text-xs",
+              if(@status_filter == "active",
+                do: "bg-white/20 text-white",
+                else:
+                  "bg-emerald-100 text-emerald-600 dark:bg-emerald-900/40 dark:text-emerald-400"
+              )
+            ]}>
+              {@active_count}
+            </span>
+          </button>
+          <button
+            phx-click="filter_status"
+            phx-value-status="inactive"
+            id="filter-inactive"
+            class={[
+              "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+              if(@status_filter == "inactive",
+                do: "bg-zinc-600 text-white dark:bg-zinc-500 dark:text-white",
+                else:
+                  "bg-zinc-100 text-zinc-500 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
+              )
+            ]}
+          >
+            {gettext("Inactive")}
+            <span class={[
+              "ml-1.5 inline-flex items-center justify-center min-w-[1.25rem] px-1 py-0.5 rounded-full text-xs",
+              if(@status_filter == "inactive",
+                do: "bg-white/20 text-white",
+                else: "bg-zinc-200 text-zinc-500 dark:bg-zinc-700 dark:text-zinc-400"
+              )
+            ]}>
+              {@inactive_count}
+            </span>
+          </button>
+          <button
+            phx-click="filter_status"
+            phx-value-status="recently_exited"
+            id="filter-recently-exited"
+            class={[
+              "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+              if(@status_filter == "recently_exited",
+                do: "bg-amber-600 text-white dark:bg-amber-500 dark:text-white",
+                else:
+                  "bg-amber-50 text-amber-700 hover:bg-amber-100 dark:bg-amber-900/20 dark:text-amber-400 dark:hover:bg-amber-900/30"
+              )
+            ]}
+          >
+            {gettext("Recently Exited")}
+            <span class={[
+              "ml-1.5 inline-flex items-center justify-center min-w-[1.25rem] px-1 py-0.5 rounded-full text-xs",
+              if(@status_filter == "recently_exited",
+                do: "bg-white/20 text-white",
+                else: "bg-amber-100 text-amber-600 dark:bg-amber-900/40 dark:text-amber-400"
+              )
+            ]}>
+              {@recently_exited_count}
+            </span>
+          </button>
+        </div>
+      <% end %>
+
+      <%!-- Results count --%>
+      <div class="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400 mb-4">
+        <span id="symbol-count">
+          {ngettext("1 symbol", "%{count} symbols", @symbol_count)}
+        </span>
+        <span class="text-zinc-300 dark:text-zinc-600">&bull;</span>
+        <span id="total-signals-count">
+          {ngettext("1 total signal", "%{count} total signals", @total_signals)}
+        </span>
+      </div>
+
+      <%!-- Symbol grid --%>
+      <div
+        id="historical-symbols"
+        phx-update="stream"
+        class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <div class="hidden only:block col-span-full text-center py-12" id="historical-empty">
+          <div class="flex justify-center mb-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-800">
+              <.icon name="hero-magnifying-glass" class="w-6 h-6 text-zinc-400" />
+            </div>
+          </div>
+          <p class="text-zinc-600 dark:text-zinc-400">
+            {gettext("No symbols match your search.")}
+          </p>
+        </div>
+        <.link
+          :for={{id, symbol_data} <- @streams.symbols}
+          navigate={~p"/historical/#{symbol_data.symbol}"}
+          id={id}
+          class="block rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-5 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
+        >
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-lg font-semibold text-zinc-900 dark:text-white">
+              {String.upcase(symbol_data.symbol)}
+            </span>
+            <%= if @is_pro do %>
+              <%= if symbol_data.has_active do %>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/20 dark:bg-emerald-500/10 dark:text-emerald-400 dark:ring-emerald-500/20">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75">
+                    </span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  {gettext("Active")}
+                </span>
+              <% else %>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-zinc-100 text-zinc-500 ring-1 ring-zinc-500/10 dark:bg-zinc-800 dark:text-zinc-400 dark:ring-zinc-400/10">
+                  {gettext("Inactive")}
+                </span>
+              <% end %>
+            <% end %>
+          </div>
+          <p class="text-sm text-zinc-600 dark:text-zinc-400 truncate">{symbol_data.name}</p>
+          <div class="mt-3 flex items-center gap-4 text-xs text-zinc-500 dark:text-zinc-400">
+            <span>
+              {ngettext(
+                "1 occurrence",
+                "%{count} occurrences",
+                symbol_data.occurrence_count
+              )}
+            </span>
+          </div>
+        </.link>
+      </div>
+    </div>
+  </div>
+</Layouts.app>

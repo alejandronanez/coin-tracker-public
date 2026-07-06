@@ -1,0 +1,418 @@
+<Layouts.app
+  flash={@flash}
+  current_scope={@current_scope}
+  page_title={@page_title}
+  current_path={@current_path}
+>
+  <div class="py-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <%!-- Page Header --%>
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+          {gettext("Getting Started")}
+        </h1>
+        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          {gettext(
+            "Learn how to use %{app} to track your crypto positions and get notified on Telegram.",
+            app: app_name()
+          )}
+        </p>
+      </div>
+
+      <%!-- Steps Container --%>
+      <div class="space-y-8">
+        <%!-- Step 1: Evaluate Signals --%>
+        <div class="bg-white dark:bg-zinc-800 shadow rounded-lg overflow-hidden">
+          <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                1
+              </span>
+              <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                {gettext("Evaluate Incoming Signals")}
+              </h2>
+            </div>
+          </div>
+          <div class="px-6 py-5">
+            <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+              {gettext(
+                "When a new signal arrives, take time to evaluate the coin before making any decisions. Here's what to look for:"
+              )}
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <.icon name="hero-chart-bar" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                <div>
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Volume")}
+                  </span>
+                  <span class="text-zinc-600 dark:text-zinc-400">
+                    {gettext(
+                      " - Rising volume is a positive sign. It indicates increasing interest and trading activity. Check the volume increase percentage."
+                    )}
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <.icon
+                  name="hero-arrow-trending-up"
+                  class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"
+                />
+                <div>
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Price Movement")}
+                  </span>
+                  <span class="text-zinc-600 dark:text-zinc-400">
+                    {gettext(
+                      " - Compare current price vs initial price when the signal was detected."
+                    )}
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <.icon name="hero-trophy" class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                <div>
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Position Rank")}
+                  </span>
+                  <span class="text-zinc-600 dark:text-zinc-400">
+                    {gettext(
+                      " - Signals in the top 10 are actively trending. Lower positions indicate stronger momentum."
+                    )}
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <.icon name="hero-clock" class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
+                <div>
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Time in Top")}
+                  </span>
+                  <span class="text-zinc-600 dark:text-zinc-400">
+                    {gettext(
+                      " - How long has this coin been trending? Newer signals may have more upside potential."
+                    )}
+                  </span>
+                </div>
+              </li>
+            </ul>
+            <div class="mt-5 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
+              <div class="flex items-start gap-3">
+                <.icon
+                  name="hero-exclamation-triangle"
+                  class="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0"
+                />
+                <p class="text-sm text-amber-800 dark:text-amber-200">
+                  <span class="font-semibold">{gettext("DYOR:")}</span>
+                  {gettext(
+                    " Always do your own research. Signals are informational only and not financial advice."
+                  )}
+                </p>
+              </div>
+            </div>
+            <div class="mt-5">
+              <.link
+                navigate={~p"/signals"}
+                class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                {gettext("View Signals")}
+                <.icon name="hero-arrow-right" class="w-4 h-4" />
+              </.link>
+            </div>
+          </div>
+        </div>
+
+        <%!-- Step 2: Buy on Exchange --%>
+        <div class="bg-white dark:bg-zinc-800 shadow rounded-lg overflow-hidden">
+          <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                2
+              </span>
+              <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                {gettext("Buy on Your Preferred Exchange")}
+              </h2>
+            </div>
+          </div>
+          <div class="px-6 py-5">
+            <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+              {gettext(
+                "After evaluating a signal, execute your trade on your preferred exchange (Binance, Bitget, MEXC, etc.). Make sure to note down:"
+              )}
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="p-4 bg-zinc-50 dark:bg-zinc-700/50 rounded-lg">
+                <div class="flex items-center gap-2 mb-2">
+                  <.icon name="hero-currency-dollar" class="w-5 h-5 text-green-500" />
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Entry Price")}
+                  </span>
+                </div>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext("The exact price at which you bought the coin.")}
+                </p>
+              </div>
+              <div class="p-4 bg-zinc-50 dark:bg-zinc-700/50 rounded-lg">
+                <div class="flex items-center gap-2 mb-2">
+                  <.icon name="hero-banknotes" class="w-5 h-5 text-blue-500" />
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Amount")}
+                  </span>
+                </div>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext("How much you invested in dollars.")}
+                </p>
+              </div>
+              <div class="p-4 bg-zinc-50 dark:bg-zinc-700/50 rounded-lg">
+                <div class="flex items-center gap-2 mb-2">
+                  <.icon name="hero-building-library" class="w-5 h-5 text-purple-500" />
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                    {gettext("Exchange")}
+                  </span>
+                </div>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext("Which exchange you used for the trade.")}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <%!-- Step 3: Create Position --%>
+        <div class="bg-white dark:bg-zinc-800 shadow rounded-lg overflow-hidden">
+          <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                3
+              </span>
+              <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                {gettext("Create a Position in the App")}
+              </h2>
+            </div>
+          </div>
+          <div class="px-6 py-5">
+            <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+              {gettext(
+                "Now track your trade by creating a position. Here's what each field means:"
+              )}
+            </p>
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-500 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Symbol")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "The ticker symbol of your coin (e.g., BTC, ETH, SOL). This is used to fetch live prices."
+                  )}
+                </p>
+              </div>
+              <div class="border-l-4 border-purple-500 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Exchange")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "Select the exchange where you bought the coin. We'll fetch prices from this exchange for accurate tracking."
+                  )}
+                </p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Entry Price")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "Your buy price. This is used to calculate your profit/loss percentage."
+                  )}
+                </p>
+              </div>
+              <div class="border-l-4 border-amber-500 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Alert Every %")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "How often you want to receive gain alerts. For example, setting 2 will alert you at +2%, +4%, +6%, etc."
+                  )}
+                </p>
+              </div>
+              <div class="border-l-4 border-red-500 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Stop Loss %")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "The percentage drop that triggers a stop-loss alert. Enter as a positive number (e.g., 10 for -10%). You'll be alerted when the price drops below this threshold."
+                  )}
+                </p>
+              </div>
+              <div class="border-l-4 border-teal-500 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Take Profit %")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "Your target gain percentage. You'll receive an alert when the price reaches this level above your entry."
+                  )}
+                </p>
+              </div>
+              <div class="border-l-4 border-zinc-400 pl-4 py-2">
+                <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+                  {gettext("Amount Invested (Optional)")}
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  {gettext(
+                    "The dollar amount you invested. If provided, we'll show your profit/loss in dollars, not just percentages."
+                  )}
+                </p>
+              </div>
+            </div>
+            <div class="mt-5">
+              <.link
+                navigate={~p"/positions/new"}
+                class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                {gettext("Create Your First Position")}
+                <.icon name="hero-arrow-right" class="w-4 h-4" />
+              </.link>
+            </div>
+          </div>
+        </div>
+
+        <%!-- Step 4: Telegram Notifications --%>
+        <div class="bg-white dark:bg-zinc-800 shadow rounded-lg overflow-hidden">
+          <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                4
+              </span>
+              <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                {gettext("Get Telegram Notifications")}
+              </h2>
+            </div>
+          </div>
+          <div class="px-6 py-5">
+            <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+              {gettext(
+                "Connect your Telegram account to receive real-time alerts. Once connected, you'll receive:"
+              )}
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                <.icon
+                  name="hero-arrow-trending-up"
+                  class="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"
+                />
+                <div>
+                  <span class="font-medium text-green-800 dark:text-green-200">
+                    {gettext("Threshold Alerts")}
+                  </span>
+                  <p class="text-sm text-green-700 dark:text-green-300">
+                    {gettext(
+                      "Notifications when your position reaches each threshold level (based on your Alert Every % setting)."
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                <.icon
+                  name="hero-arrow-trending-down"
+                  class="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0"
+                />
+                <div>
+                  <span class="font-medium text-red-800 dark:text-red-200">
+                    {gettext("Stop-Loss Alerts")}
+                  </span>
+                  <p class="text-sm text-red-700 dark:text-red-300">
+                    {gettext(
+                      "Immediate notification when a position drops below your stop-loss percentage."
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <.icon
+                  name="hero-trophy"
+                  class="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0"
+                />
+                <div>
+                  <span class="font-medium text-blue-800 dark:text-blue-200">
+                    {gettext("Take-Profit Alerts")}
+                  </span>
+                  <p class="text-sm text-blue-700 dark:text-blue-300">
+                    {gettext(
+                      "Notification when your position reaches your target profit percentage."
+                    )}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5 p-4 bg-zinc-50 dark:bg-zinc-700/50 rounded-lg">
+              <h4 class="font-medium text-zinc-900 dark:text-zinc-100 mb-2">
+                {gettext("How to connect Telegram:")}
+              </h4>
+              <ol class="list-decimal list-inside space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <li>{gettext("Go to Settings and find your Telegram connection code")}</li>
+                <li>{gettext("Open our Telegram bot")}</li>
+                <li>{gettext("Send the /start command followed by your connection code")}</li>
+                <li>{gettext("You're all set! You'll start receiving alerts immediately.")}</li>
+              </ol>
+            </div>
+            <div class="mt-5">
+              <.link
+                navigate={~p"/users/settings"}
+                class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                {gettext("Go to Settings")}
+                <.icon name="hero-arrow-right" class="w-4 h-4" />
+              </.link>
+            </div>
+          </div>
+        </div>
+
+        <%!-- Quick Tips --%>
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 shadow rounded-lg p-6 border border-blue-100 dark:border-blue-800">
+          <div class="flex items-center gap-3 mb-4">
+            <.icon name="hero-light-bulb" class="w-6 h-6 text-amber-500" />
+            <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+              {gettext("Pro Tips")}
+            </h2>
+          </div>
+          <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 mt-1">-</span>
+              <span>
+                {gettext(
+                  "Set realistic stop-loss levels to protect your capital (5-15% is common)."
+                )}
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 mt-1">-</span>
+              <span>
+                {gettext(
+                  "Use the \"Alert Every %\" to avoid notification overload. Start with 5% increments."
+                )}
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 mt-1">-</span>
+              <span>
+                {gettext(
+                  "Check the Market Status page to gauge overall market health before trading."
+                )}
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 mt-1">-</span>
+              <span>
+                {gettext("Volume is key - increasing volume often precedes price movement.")}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layouts.app>

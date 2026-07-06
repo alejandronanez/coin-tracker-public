@@ -1,0 +1,516 @@
+<Layouts.app
+  flash={@flash}
+  current_scope={@current_scope}
+  page_title={@page_title}
+  current_path={@current_path}
+>
+  <div class="py-6 relative">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <%!-- Back Button and Signal Header --%>
+      <div class="mb-8">
+        <.link
+          navigate={~p"/signals"}
+          class="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-4"
+        >
+          <.icon name="hero-arrow-left" class="w-4 h-4" /> {gettext("Back to Signals")}
+        </.link>
+
+        <div class="flex items-center gap-4 flex-wrap">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg">
+            <span class="text-2xl font-bold text-white">
+              {@signal.symbol |> String.first() |> String.upcase()}
+            </span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h1 class="text-3xl font-bold text-zinc-900 dark:text-white">
+              {String.upcase(@signal.symbol)}
+            </h1>
+            <p class="text-zinc-600 dark:text-zinc-400">
+              {@signal.name}
+            </p>
+          </div>
+          <%= if @watchlist_enabled? do %>
+            <button
+              id={"signal-#{@signal.id}-watch-toggle"}
+              phx-click="toggle_watch"
+              type="button"
+              aria-label={
+                if(@watched?,
+                  do: gettext("Unwatch %{symbol}", symbol: String.upcase(@signal.symbol)),
+                  else: gettext("Watch %{symbol}", symbol: String.upcase(@signal.symbol))
+                )
+              }
+              class={[
+                "inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                if(@watched?,
+                  do:
+                    "text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20 hover:bg-yellow-100 dark:hover:bg-yellow-900/30 border border-yellow-200 dark:border-yellow-800",
+                  else:
+                    "text-zinc-700 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-700"
+                )
+              ]}
+            >
+              <.icon
+                name={if(@watched?, do: "hero-star-solid", else: "hero-star")}
+                class="w-5 h-5"
+              />
+              {if(@watched?, do: gettext("Watching"), else: gettext("Watch"))}
+            </button>
+          <% end %>
+        </div>
+
+        <%!-- Trade button --%>
+        <div class="mt-4">
+          <%= if @has_credentials do %>
+            <.link
+              id="trade-signal-btn"
+              navigate={~p"/signals/#{@signal.id}/trade"}
+              class="inline-flex items-center gap-2 rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
+            >
+              <.icon name="hero-bolt" class="w-4 h-4" />
+              {gettext("Trade this signal")}
+            </.link>
+          <% else %>
+            <.link
+              id="setup-keys-btn"
+              navigate={~p"/settings/exchange-keys"}
+              class="inline-flex items-center gap-2 rounded-md border border-zinc-300 dark:border-white/10 px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-white/5"
+            >
+              <.icon name="hero-key" class="w-4 h-4" />
+              {gettext("Set up API keys to trade")}
+            </.link>
+          <% end %>
+        </div>
+      </div>
+
+      <%!-- ═══════════════════════════════ --%>
+      <%!-- IN TOP SINCE CARD                --%>
+      <%!-- ═══════════════════════════════ --%>
+      <div
+        id={"in-top-since-card-#{@signal.id}"}
+        class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 p-6 mb-6"
+      >
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+          {gettext("In Top Since")}
+        </p>
+        <div class="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">
+          <div
+            id={"in-top-since-date-#{@signal.id}"}
+            phx-hook="LocalTime"
+            phx-update="ignore"
+            data-datetime={DateTime.to_iso8601(@signal.in_top_since)}
+            data-format="date"
+          >
+          </div>
+          <div class="text-base font-medium text-zinc-500 dark:text-zinc-400 mt-1">
+            <span
+              id={"in-top-since-time-#{@signal.id}"}
+              phx-hook="LocalTime"
+              phx-update="ignore"
+              data-datetime={DateTime.to_iso8601(@signal.in_top_since)}
+              data-format="time"
+            >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <%!-- ═══════════════════════════════ --%>
+      <%!-- PRICE CARD                       --%>
+      <%!-- ═══════════════════════════════ --%>
+      <div
+        id={"price-card-#{@signal.id}"}
+        class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 p-6 mb-6"
+      >
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+              {gettext("Entry Price")}
+            </p>
+            <p
+              id={"entry-price-#{@signal.id}"}
+              class="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white tabular-nums"
+            >
+              {format_price(@signal.initial_price_usd)}
+            </p>
+          </div>
+          <div>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+              {gettext("Current Price")}
+            </p>
+            <p
+              id={"current-price-#{@signal.id}"}
+              class="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400 tabular-nums"
+            >
+              {format_price(@current_price)}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <%!-- ═══════════════════════════════ --%>
+      <%!-- PERFORMANCE METRICS (Pro-only)   --%>
+      <%!-- ═══════════════════════════════ --%>
+      <%= if @is_pro_user do %>
+        <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 p-6 mb-6">
+          <h2 class="text-lg font-semibold text-zinc-900 dark:text-white mb-4">
+            <.icon name="hero-chart-bar" class="w-5 h-5 inline mr-2" />
+            {gettext("Performance Metrics")}
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+            <%!-- Time in Top --%>
+            <div class="text-center">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">
+                {gettext("Time in Top")}
+              </p>
+              <p class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">
+                {@time_in_top || gettext("N/A")}
+              </p>
+            </div>
+
+            <%!-- Best Position --%>
+            <div class="text-center">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">
+                {gettext("Best Position")}
+              </p>
+              <%= if @best_position do %>
+                <p class={[
+                  "text-xl sm:text-2xl font-bold",
+                  if(@best_position == 1,
+                    do: "text-yellow-500 dark:text-yellow-400",
+                    else: "text-emerald-600 dark:text-emerald-400"
+                  )
+                ]}>
+                  #{@best_position}
+                </p>
+              <% else %>
+                <p class="text-xl sm:text-2xl font-bold text-zinc-400 dark:text-zinc-500">
+                  {gettext("N/A")}
+                </p>
+              <% end %>
+            </div>
+
+            <%!-- Price Performance --%>
+            <div class="text-center">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">
+                {gettext("Price Performance")}
+              </p>
+              <%= if is_nil(@price_performance) do %>
+                <p class="text-xl sm:text-2xl font-bold text-zinc-400 dark:text-zinc-500">
+                  {gettext("N/A")}
+                </p>
+              <% else %>
+                <p class={[
+                  "text-xl sm:text-2xl font-bold font-mono",
+                  if(@price_performance >= 0,
+                    do: "text-emerald-600 dark:text-emerald-400",
+                    else: "text-red-500 dark:text-red-400"
+                  )
+                ]}>
+                  {if @price_performance >= 0, do: "+", else: ""}{Float.round(
+                    @price_performance,
+                    1
+                  )}%
+                </p>
+              <% end %>
+            </div>
+
+            <%!-- Volume Growth --%>
+            <div class="text-center">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">
+                {gettext("Volume Growth")}
+              </p>
+              <%= if is_nil(@volume_change_percentage) do %>
+                <p class="text-xl sm:text-2xl font-bold text-zinc-400 dark:text-zinc-500">
+                  {gettext("N/A")}
+                </p>
+              <% else %>
+                <p class={[
+                  "text-xl sm:text-2xl font-bold font-mono",
+                  if(@volume_change_percentage >= 0,
+                    do: "text-emerald-600 dark:text-emerald-400",
+                    else: "text-orange-500 dark:text-orange-400"
+                  )
+                ]}>
+                  {if @volume_change_percentage >= 0, do: "+", else: ""}{Float.round(
+                    @volume_change_percentage,
+                    1
+                  )}%
+                </p>
+              <% end %>
+            </div>
+
+            <%!-- Peak Gain --%>
+            <div class="text-center">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">
+                {gettext("Peak Gain")}
+              </p>
+              <%= if is_nil(@max_increase) do %>
+                <p class="text-xl sm:text-2xl font-bold text-zinc-400 dark:text-zinc-500">
+                  {gettext("N/A")}
+                </p>
+              <% else %>
+                <% peak_color =
+                  cond do
+                    @max_increase < 10 -> "text-zinc-600 dark:text-zinc-400"
+                    @max_increase < 50 -> "text-green-600 dark:text-green-400"
+                    @max_increase < 100 -> "text-emerald-600 dark:text-emerald-400"
+                    true -> "text-teal-600 dark:text-teal-400"
+                  end %>
+                <p class={["text-xl sm:text-2xl font-bold font-mono", peak_color]}>
+                  +{Float.round(@max_increase, 1)}%
+                </p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <%!-- ═══════════════════════════════ --%>
+      <%!-- PREVIOUS OCCURRENCES PANEL       --%>
+      <%!-- ═══════════════════════════════ --%>
+      <section id="previous-occurrences-panel" class="mb-6">
+        <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+          <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+            <h2 class="text-lg font-semibold text-zinc-900 dark:text-white">
+              {gettext("Previous occurrences of %{symbol}",
+                symbol: String.upcase(@signal.symbol)
+              )}
+            </h2>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+              {gettext(
+                "Every prior time this symbol appeared in the top 10, with entry, top and exit prices plus time per position."
+              )}
+            </p>
+          </div>
+
+          <div class="p-6">
+            <%= cond do %>
+              <% @previous_occurrences == [] -> %>
+                <div id="previous-occurrences-empty" class="text-center py-6">
+                  <div class="flex justify-center mb-3">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-800">
+                      <.icon name="hero-clock" class="w-6 h-6 text-zinc-400" />
+                    </div>
+                  </div>
+                  <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                    {gettext("First time %{symbol} has been in the top 10.",
+                      symbol: String.upcase(@signal.symbol)
+                    )}
+                  </p>
+                </div>
+              <% true -> %>
+                <div class="grid gap-3">
+                  <div
+                    :for={occurrence <- @previous_occurrences}
+                    id={"occurrence-#{occurrence.signal.id}"}
+                    class="rounded-xl border border-zinc-200 dark:border-zinc-700 p-5"
+                  >
+                    <%!-- Header: dates + total time in top --%>
+                    <div class="flex flex-wrap items-start justify-between gap-3 pb-4 mb-4 border-b border-zinc-100 dark:border-zinc-800">
+                      <dl class="grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 text-sm">
+                        <dt class="font-medium text-zinc-900 dark:text-white">
+                          {gettext("Entered")}:
+                        </dt>
+                        <dd class="text-zinc-600 dark:text-zinc-400 tabular-nums">
+                          <time
+                            id={"occurrence-entered-#{occurrence.signal.id}"}
+                            phx-hook="LocalTime"
+                            phx-update="ignore"
+                            data-datetime={DateTime.to_iso8601(occurrence.entry_at)}
+                            data-format="datetime"
+                          >
+                          </time>
+                        </dd>
+                        <dt class="font-medium text-zinc-900 dark:text-white">
+                          {gettext("Exited")}:
+                        </dt>
+                        <dd class="text-zinc-600 dark:text-zinc-400 tabular-nums">
+                          <%= if occurrence.exit_at do %>
+                            <time
+                              id={"occurrence-exited-#{occurrence.signal.id}"}
+                              phx-hook="LocalTime"
+                              phx-update="ignore"
+                              data-datetime={DateTime.to_iso8601(occurrence.exit_at)}
+                              data-format="datetime"
+                            >
+                            </time>
+                          <% else %>
+                            <span class="italic">{gettext("still active")}</span>
+                          <% end %>
+                        </dd>
+                      </dl>
+                      <div class="text-right">
+                        <div class="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                          {gettext("Time in top")}
+                        </div>
+                        <div class="text-lg font-semibold text-zinc-900 dark:text-white tabular-nums">
+                          {format_seconds(occurrence.duration_seconds)}
+                        </div>
+                      </div>
+                    </div>
+
+                    <%!-- Price row: entry → top (with %) → exit --%>
+                    <div class="flex flex-col sm:grid sm:grid-cols-3 divide-y divide-zinc-100 dark:divide-zinc-800 sm:divide-y-0 sm:gap-3 mb-4 border-b border-zinc-100 dark:border-zinc-800 sm:border-b-0 pb-2 sm:pb-0">
+                      <div class="flex items-baseline justify-between gap-3 py-2 sm:block sm:py-0">
+                        <div class="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400 sm:mb-0.5">
+                          {gettext("Entry")}
+                        </div>
+                        <div class="text-sm sm:text-base font-semibold text-zinc-900 dark:text-white tabular-nums text-right sm:text-left">
+                          {format_price(occurrence.entry_price)}
+                        </div>
+                      </div>
+                      <div class="flex items-baseline justify-between gap-3 py-2 sm:block sm:py-0">
+                        <div class="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400 sm:mb-0.5">
+                          {gettext("Top")}
+                        </div>
+                        <div class="flex flex-wrap items-center justify-end sm:justify-start gap-1.5">
+                          <div class="text-sm sm:text-base font-semibold text-zinc-900 dark:text-white tabular-nums">
+                            {format_price(occurrence.top_price)}
+                          </div>
+                          <span class={[
+                            "px-1.5 py-0.5 rounded-full text-[11px] font-semibold tabular-nums",
+                            occurrence_top_delta_class(occurrence)
+                          ]}>
+                            {occurrence_top_delta_text(occurrence)}
+                          </span>
+                        </div>
+                      </div>
+                      <div class="flex items-baseline justify-between gap-3 py-2 sm:block sm:py-0">
+                        <div class="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400 sm:mb-0.5">
+                          {gettext("Exit")}
+                        </div>
+                        <div class="text-sm sm:text-base font-semibold text-zinc-900 dark:text-white tabular-nums text-right sm:text-left">
+                          {format_price(occurrence.exit_price)}
+                        </div>
+                      </div>
+                    </div>
+
+                    <%!-- Position chips --%>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="text-[11px] uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                        {gettext("Positions")}:
+                      </span>
+                      <%= cond do %>
+                        <% occurrence.position_durations == %{} -> %>
+                          <span class="text-sm text-zinc-500 dark:text-zinc-400 italic">
+                            {gettext("no position history")}
+                          </span>
+                        <% true -> %>
+                          <span
+                            :for={
+                              {position, seconds} <-
+                                sorted_position_durations(occurrence.position_durations)
+                            }
+                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800"
+                          >
+                            #{position}: {format_seconds(seconds)}
+                          </span>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+
+                <%= if @total_previous_count > length(@previous_occurrences) or @show_all_occurrences? do %>
+                  <div class="mt-4 text-center">
+                    <button
+                      id="toggle-occurrences-btn"
+                      type="button"
+                      phx-click="toggle_occurrences"
+                      class="text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                    >
+                      <%= if @show_all_occurrences? do %>
+                        {gettext("Show fewer")}
+                      <% else %>
+                        {gettext("Show %{count} more",
+                          count: @total_previous_count - length(@previous_occurrences)
+                        )}
+                      <% end %>
+                    </button>
+                  </div>
+                <% end %>
+            <% end %>
+          </div>
+        </div>
+      </section>
+
+      <%!-- ═══════════════════════════════ --%>
+      <%!-- CHARTS (bottom of page)          --%>
+      <%!-- ═══════════════════════════════ --%>
+      <%= if @empty? do %>
+        <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 p-12 text-center">
+          <div class="flex justify-center mb-4">
+            <div class="flex items-center justify-center w-16 h-16 rounded-full bg-zinc-100 dark:bg-zinc-800">
+              <.icon name="hero-clock" class="w-8 h-8 text-zinc-400" />
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
+            {gettext("No History Yet")}
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-400">
+            {gettext("Snapshot history will appear here as the signal is tracked over time.")}
+          </p>
+        </div>
+      <% else %>
+        <div class="space-y-6">
+          <%!-- Price Chart --%>
+          <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+            <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+              <h2 class="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                {gettext("Price (USD)")}
+              </h2>
+            </div>
+            <div class="p-6">
+              <div
+                id="price-chart"
+                phx-hook="PriceChart"
+                phx-update="ignore"
+                data-chart={Jason.encode!(@price_chart_data)}
+                class="w-full h-[250px]"
+              >
+              </div>
+            </div>
+          </div>
+
+          <%!-- Volume Chart --%>
+          <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+            <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+              <h2 class="text-lg font-semibold text-emerald-600 dark:text-emerald-400">
+                {gettext("24h Volume")}
+              </h2>
+            </div>
+            <div class="p-6">
+              <div
+                id="volume-chart"
+                phx-hook="VolumeChart"
+                phx-update="ignore"
+                data-chart={Jason.encode!(@volume_chart_data)}
+                class="w-full h-[250px]"
+              >
+              </div>
+            </div>
+          </div>
+
+          <%!-- Position Chart --%>
+          <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+            <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-700">
+              <h2 class="text-lg font-semibold text-amber-600 dark:text-amber-400">
+                {gettext("Top 10 Position")}
+              </h2>
+            </div>
+            <div class="p-6">
+              <div
+                id="position-chart"
+                phx-hook="PositionChart"
+                phx-update="ignore"
+                data-chart={Jason.encode!(@position_chart_data)}
+                class="w-full h-[200px]"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</Layouts.app>

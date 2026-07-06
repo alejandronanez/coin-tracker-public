@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+cd -P -- "$(dirname -- "$0")"
+exec ./coin_tracker eval CoinTracker.Release.migrate

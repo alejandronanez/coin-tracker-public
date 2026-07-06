@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title default={app_name()} suffix=" · Crypto Signals">
+      {assigns[:page_title]}
+    </.live_title>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link phx-track-static rel="stylesheet" href={~p"/assets/css/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/js/app.js"}>
+    </script>
+    <script>
+      (() => {
+        const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        
+        const setTheme = (theme) => {
+          if (theme === "system") {
+            localStorage.removeItem("phx:theme");
+            const systemTheme = getSystemTheme();
+            document.documentElement.setAttribute("data-theme", systemTheme);
+          } else {
+            localStorage.setItem("phx:theme", theme);
+            document.documentElement.setAttribute("data-theme", theme);
+          }
+        };
+        
+        // Initialize theme on page load
+        const savedTheme = localStorage.getItem("phx:theme");
+        setTheme(savedTheme || "system");
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          if (!localStorage.getItem("phx:theme")) {
+            setTheme("system");
+          }
+        });
+        
+        // Listen for theme changes from other tabs
+        window.addEventListener("storage", (e) => {
+          if (e.key === "phx:theme") {
+            setTheme(e.newValue || "system");
+          }
+        });
+        
+        // Listen for theme toggle events
+        window.addEventListener("phx:set-theme", (e) => setTheme(e.target.dataset.phxTheme));
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans antialiased">
+    {@inner_content}
+  </body>
+</html>

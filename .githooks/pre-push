@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+# Load .env if present so runtime.exs (which requires SECRET_KEY_BASE etc.)
+# can boot during compile/test. Fresh clones without .env will still fail
+# with the normal strict-config error, which is the desired behavior.
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+fi
+
+echo "[pre-push] running mix precommit (compile, deps.unlock --unused, format, test)..."
+mix precommit
+echo "[pre-push] all checks passed"

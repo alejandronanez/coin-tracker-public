@@ -1,0 +1,3151 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/coin_tracker_web/live/position_live/index.ex:68
+#, elixir-autogen, elixir-format
+msgid "%{symbol_pair} position closed (%{reason})"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:39
+#, elixir-autogen, elixir-format
+msgid "/ 10 active signals"
+msgstr ""
+
+#: lib/coin_tracker_web/components/core_components.ex:425
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:120
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:480
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1140
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:47
+#, elixir-autogen, elixir-format
+msgid "Active Subscriptions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:91
+#, elixir-autogen, elixir-format
+msgid "Active signals over time"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:67
+#, elixir-autogen, elixir-format
+msgid "Add Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:10
+#, elixir-autogen, elixir-format
+msgid "Admin Dashboard"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:144
+#, elixir-autogen, elixir-format
+msgid "Admin Panel"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:66
+#: lib/coin_tracker_web/live/position_live/new.html.heex:45
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:232
+#, elixir-autogen, elixir-format
+msgid "Alert Every %"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:68
+#: lib/coin_tracker_web/live/position_live/new.html.heex:47
+#, elixir-autogen, elixir-format
+msgid "Alert frequency (e.g., 2 for 2%, 4%, 6%...)"
+msgstr ""
+
+#: lib/coin_tracker_web/user_auth.ex:268
+#, elixir-autogen, elixir-format
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:167
+#, elixir-autogen, elixir-format
+msgid "Are you sure you want to close this position?"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:362
+#: lib/coin_tracker_web/components/layouts.ex:374
+#, elixir-autogen, elixir-format
+msgid "Attempting to reconnect"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:345
+#, elixir-autogen, elixir-format
+msgid "BTC Market Reference"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:38
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:211
+#, elixir-autogen, elixir-format
+msgid "Back to Settings"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:33
+#, elixir-autogen, elixir-format
+msgid "Basic position tracking to get started"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:27
+#, elixir-autogen, elixir-format
+msgid "Biggest Loss First"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:313
+#: lib/coin_tracker_web/live/position_live/new.html.heex:254
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:97
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:190
+#, elixir-autogen, elixir-format
+msgid "Cancel"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1018
+#, elixir-autogen, elixir-format
+msgid "Check back soon for trending cryptocurrencies"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:202
+#, elixir-autogen, elixir-format
+msgid "Choose your preferred color theme"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:216
+#, elixir-autogen, elixir-format
+msgid "Choose your preferred language"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:85
+#, elixir-autogen, elixir-format
+msgid "Cleared signals and triggered manual poll! Data will update shortly."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:462
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1119
+#, elixir-autogen, elixir-format
+msgid "Coin"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1061
+#, elixir-autogen, elixir-format
+msgid "Coin Name (A-Z)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:86
+#: lib/coin_tracker_web/live/position_live/new.html.heex:257
+#, elixir-autogen, elixir-format
+msgid "Create Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:14
+#, elixir-autogen, elixir-format
+msgid "Create a new trading position to track your investments"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:82
+#, elixir-autogen, elixir-format
+msgid "Create your first position to start tracking."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:256
+#, elixir-autogen, elixir-format
+msgid "Creating..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:25
+#, elixir-autogen, elixir-format
+msgid "Current Market Status"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:139
+#, elixir-autogen, elixir-format
+msgid "Current Price"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:446
+#, elixir-autogen, elixir-format
+msgid "Currently trending cryptocurrencies"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.ex:44
+#: lib/coin_tracker_web/live/position_live/index.html.heex:160
+#, elixir-autogen, elixir-format
+msgid "Edit Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:225
+#, elixir-autogen, elixir-format
+msgid "English"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:43
+#: lib/coin_tracker_web/live/position_live/new.html.heex:57
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:128
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:148
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:222
+#, elixir-autogen, elixir-format
+msgid "Entry Price"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:108
+#, elixir-autogen, elixir-format
+msgid "Everything you need for serious trading"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:52
+#, elixir-autogen, elixir-format
+msgid "Excellent"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:29
+#: lib/coin_tracker_web/live/position_live/new.html.heex:33
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:153
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:170
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:212
+#, elixir-autogen, elixir-format
+msgid "Exchange"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:112
+#, elixir-autogen, elixir-format
+msgid "Failed to close position."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:605
+#, elixir-autogen, elixir-format
+msgid "Failed to generate Telegram link. Please try again."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:625
+#, elixir-autogen, elixir-format
+msgid "Failed to update language preference."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:151
+#, elixir-autogen, elixir-format
+msgid "For your tracked positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:31
+#: lib/coin_tracker_web/live/user_live/settings.ex:50
+#, elixir-autogen, elixir-format
+msgid "Free"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:85
+#, elixir-autogen, elixir-format
+msgid "Get started free"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:56
+#, elixir-autogen, elixir-format
+msgid "Good"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1098
+#, elixir-autogen, elixir-format
+msgid "Grace Period"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:229
+#, elixir-autogen, elixir-format
+msgid "Held for %{time}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:24
+#, elixir-autogen, elixir-format
+msgid "Highest Profit First"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:88
+#, elixir-autogen, elixir-format
+msgid "Historical Trend"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:15
+#, elixir-autogen, elixir-format
+msgid "Historical tracking of active signals in the top 10 trending list"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:59
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:756
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:911
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1436
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1603
+#, elixir-autogen, elixir-format
+msgid "History"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/user_session_controller.ex:43
+#, elixir-autogen, elixir-format
+msgid "Invalid email or password"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:213
+#, elixir-autogen, elixir-format
+msgid "Language"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:621
+#, elixir-autogen, elixir-format
+msgid "Language preference updated."
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:110
+#, elixir-autogen, elixir-format
+msgid "Last 30 Days"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:107
+#, elixir-autogen, elixir-format
+msgid "Last 7 Days"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:28
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:163
+#, elixir-autogen, elixir-format
+msgid "Last updated:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:477
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1137
+#, elixir-autogen, elixir-format
+msgid "Listed Since"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1058
+#, elixir-autogen, elixir-format
+msgid "Listed Since (Newest)"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/user_session_controller.ex:64
+#, elixir-autogen, elixir-format
+msgid "Logged out successfully."
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts/admin.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "Logout"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:198
+#, elixir-autogen, elixir-format
+msgid "Loss"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:64
+#, elixir-autogen, elixir-format
+msgid "Low Activity"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:77
+#: lib/coin_tracker_web/components/layouts.ex:218
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:154
+#, elixir-autogen, elixir-format
+msgid "Market Status"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "Market Status History"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:173
+#, elixir-autogen, elixir-format
+msgid "Market history"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:138
+#, elixir-autogen, elixir-format
+msgid "Market status data will appear here once the poller begins capturing snapshots."
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:60
+#, elixir-autogen, elixir-format
+msgid "Moderate"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:133
+#, elixir-autogen, elixir-format
+msgid "Monitor and manage all trading positions across the platform"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:393
+#, elixir-autogen, elixir-format
+msgid "Most Active (1-10)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:100
+#, elixir-autogen, elixir-format
+msgid "Most Popular"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:199
+#, elixir-autogen, elixir-format
+msgid "Neutral"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.ex:33
+#, elixir-autogen, elixir-format
+msgid "New Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:30
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:396
+#, elixir-autogen, elixir-format
+msgid "Newest First"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:135
+#, elixir-autogen, elixir-format
+msgid "No Data Yet"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1705
+#, elixir-autogen, elixir-format
+msgid "No Grace Period Coins"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:65
+#, elixir-autogen, elixir-format
+msgid "No Telegram alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1015
+#, elixir-autogen, elixir-format
+msgid "No Top Performers Yet"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:76
+#, elixir-autogen, elixir-format
+msgid "No active positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1708
+#, elixir-autogen, elixir-format
+msgid "No cryptocurrencies have recently exited the top 10"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:74
+#, elixir-autogen, elixir-format
+msgid "No historical data"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:56
+#, elixir-autogen, elixir-format
+msgid "No on-chain signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:33
+#, elixir-autogen, elixir-format
+msgid "Oldest First"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:175
+#, elixir-autogen, elixir-format
+msgid "On-chain data over time"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:137
+#, elixir-autogen, elixir-format
+msgid "On-chain signals"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:188
+#, elixir-autogen, elixir-format
+msgid "Open main menu"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:120
+#, elixir-autogen, elixir-format
+msgid "Open user menu"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:180
+#: lib/coin_tracker_web/live/position_live/new.html.heex:121
+#, elixir-autogen, elixir-format
+msgid "Order Preview"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/user_session_controller.ex:59
+#, elixir-autogen, elixir-format
+msgid "Password updated successfully!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Position Details"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Position Information"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:106
+#, elixir-autogen, elixir-format
+msgid "Position closed successfully."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.ex:89
+#, elixir-autogen, elixir-format
+msgid "Position created successfully"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:109
+#, elixir-autogen, elixir-format
+msgid "Position is already closed."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:37
+#: lib/coin_tracker_web/live/position_live/edit.ex:24
+#: lib/coin_tracker_web/live/position_live/edit.ex:87
+#, elixir-autogen, elixir-format
+msgid "Position not found"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:116
+#, elixir-autogen, elixir-format
+msgid "Position not found."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:47
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:126
+#, elixir-autogen, elixir-format
+msgid "Position tracking"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.ex:78
+#, elixir-autogen, elixir-format
+msgid "Position updated successfully"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:65
+#: lib/coin_tracker_web/components/layouts.ex:206
+#: lib/coin_tracker_web/components/layouts/admin.html.heex:21
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:181
+#: lib/coin_tracker_web/live/position_live/index.ex:27
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:392
+#, elixir-autogen, elixir-format
+msgid "Positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:130
+#, elixir-autogen, elixir-format
+msgid "Positions Management"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:95
+#, elixir-autogen, elixir-format
+msgid "Positive value (e.g., 20 for 20% above entry)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:105
+#: lib/coin_tracker_web/live/user_live/settings.ex:46
+#, elixir-autogen, elixir-format
+msgid "Pro"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:197
+#, elixir-autogen, elixir-format
+msgid "Profit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:101
+#, elixir-autogen, elixir-format
+msgid "Quick Actions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:459
+#, elixir-autogen, elixir-format
+msgid "Rank"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:139
+#, elixir-autogen, elixir-format
+msgid "Real-time market insights"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1106
+#, elixir-autogen, elixir-format
+msgid "Recently exited from top 10"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:150
+#, elixir-autogen, elixir-format
+msgid "Refresh Now (Dev)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:314
+#: lib/coin_tracker_web/live/position_live/index.html.heex:171
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:107
+#, elixir-autogen, elixir-format
+msgid "Remove"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:163
+#, elixir-autogen, elixir-format
+msgid "Review past signals"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:97
+#: lib/coin_tracker_web/components/layouts.ex:151
+#: lib/coin_tracker_web/components/layouts.ex:238
+#: lib/coin_tracker_web/live/user_live/settings.ex:506
+#, elixir-autogen, elixir-format
+msgid "Settings"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:158
+#: lib/coin_tracker_web/components/layouts.ex:265
+#, elixir-autogen, elixir-format
+msgid "Sign out"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:151
+#: lib/coin_tracker_web/live/signal_live/show.ex:57
+#: lib/coin_tracker_web/live/signal_live/trade.ex:24
+#, elixir-autogen, elixir-format
+msgid "Signal not found"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:71
+#: lib/coin_tracker_web/components/layouts.ex:212
+#: lib/coin_tracker_web/components/layouts/admin.html.heex:26
+#: lib/coin_tracker_web/live/signal_live/index.ex:19
+#, elixir-autogen, elixir-format
+msgid "Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:147
+#, elixir-autogen, elixir-format
+msgid "Signals Management"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:161
+#, elixir-autogen, elixir-format
+msgid "Signals history"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:132
+#, elixir-autogen, elixir-format
+msgid "Signed in as"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:369
+#, elixir-autogen, elixir-format
+msgid "Something went wrong!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:15
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:384
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1046
+#, elixir-autogen, elixir-format
+msgid "Sort by"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:226
+#, elixir-autogen, elixir-format
+msgid "Spanish"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:201
+#: lib/coin_tracker_web/live/position_live/index.html.heex:311
+#: lib/coin_tracker_web/live/signal_live/trade.ex:183
+#, elixir-autogen, elixir-format
+msgid "Stop Loss"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:78
+#: lib/coin_tracker_web/live/position_live/new.html.heex:80
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:242
+#, elixir-autogen, elixir-format
+msgid "Stop Loss %"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:269
+#: lib/coin_tracker_web/live/position_live/new.html.heex:210
+#, elixir-autogen, elixir-format
+msgid "Stop Loss Price"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:100
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:21
+#: lib/coin_tracker_web/live/position_live/new.html.heex:22
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:202
+#, elixir-autogen, elixir-format
+msgid "Symbol"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:200
+#: lib/coin_tracker_web/live/position_live/index.html.heex:337
+#: lib/coin_tracker_web/live/signal_live/trade.ex:178
+#, elixir-autogen, elixir-format
+msgid "Take Profit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:121
+#: lib/coin_tracker_web/live/position_live/new.html.heex:93
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:252
+#, elixir-autogen, elixir-format
+msgid "Take Profit %"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:211
+#: lib/coin_tracker_web/live/position_live/new.html.heex:152
+#, elixir-autogen, elixir-format
+msgid "Take Profit Price"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:149
+#, elixir-autogen, elixir-format
+msgid "Telegram alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:24
+#, elixir-autogen, elixir-format
+msgid "The cryptocurrency symbol you want to track"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:35
+#, elixir-autogen, elixir-format
+msgid "The exchange to fetch price data from"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/user_session_controller.ex:27
+#, elixir-autogen, elixir-format
+msgid "The link is invalid or it has expired."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:199
+#, elixir-autogen, elixir-format
+msgid "Theme Preference"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1055
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1134
+#, elixir-autogen, elixir-format
+msgid "Time Remaining"
+msgstr ""
+
+#: lib/coin_tracker_web/live/market_status_live/index.html.heex:104
+#, elixir-autogen, elixir-format
+msgid "Today (24h)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:443
+#, elixir-autogen, elixir-format
+msgid "Top 10 Performers"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:67
+#, elixir-autogen, elixir-format
+msgid "Total Positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:87
+#, elixir-autogen, elixir-format
+msgid "Total Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:27
+#, elixir-autogen, elixir-format
+msgid "Total Users"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:20
+#, elixir-autogen, elixir-format
+msgid "Unlock powerful features to stay ahead of the market with real-time signals and comprehensive analytics."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:316
+#, elixir-autogen, elixir-format
+msgid "Update Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:14
+#, elixir-autogen, elixir-format
+msgid "Update trading parameters"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:315
+#, elixir-autogen, elixir-format
+msgid "Updating..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:197
+#, elixir-autogen, elixir-format
+msgid "Upgrade Now"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:39
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:51
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:17
+#: lib/coin_tracker_web/live/user_live/settings.ex:94
+#, elixir-autogen, elixir-format
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/user_session_controller.ex:8
+#, elixir-autogen, elixir-format
+msgid "User confirmed successfully."
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts/admin.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:113
+#, elixir-autogen, elixir-format
+msgid "Users Management"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:306
+#, elixir-autogen, elixir-format
+msgid "View Details"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:116
+#, elixir-autogen, elixir-format
+msgid "View and manage all user accounts, subscriptions, and permissions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:150
+#, elixir-autogen, elixir-format
+msgid "View and manage cryptocurrency signals and alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:474
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1131
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:47
+#, elixir-autogen, elixir-format
+msgid "Volume"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:399
+#, elixir-autogen, elixir-format
+msgid "Volume Change"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:357
+#, elixir-autogen, elixir-format
+msgid "We can't find the internet"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/user_session_controller.ex:12
+#, elixir-autogen, elixir-format
+msgid "Welcome back!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "Welcome back, %{email}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:79
+#, elixir-autogen, elixir-format
+msgid "You don't have any active positions yet."
+msgstr ""
+
+#: lib/coin_tracker_web/user_auth.ex:286
+#, elixir-autogen, elixir-format
+msgid "You must be an admin to access this page."
+msgstr ""
+
+#: lib/coin_tracker_web/user_auth.ex:219
+#: lib/coin_tracker_web/user_auth.ex:339
+#, elixir-autogen, elixir-format
+msgid "You must log in to access this page."
+msgstr ""
+
+#: lib/coin_tracker_web/user_auth.ex:236
+#, elixir-autogen, elixir-format
+msgid "You must re-authenticate to access this page."
+msgstr ""
+
+#: lib/coin_tracker_web/user_auth.ex:258
+#, elixir-autogen, elixir-format
+msgid "You need an active Pro or Admin subscription to access this feature."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:45
+#: lib/coin_tracker_web/live/position_live/new.html.heex:59
+#, elixir-autogen, elixir-format
+msgid "Your entry price for this position"
+msgstr ""
+
+#: lib/coin_tracker_web/components/core_components.ex:83
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:322
+#, elixir-autogen, elixir-format
+msgid "stop loss hit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:321
+#, elixir-autogen, elixir-format
+msgid "take profit hit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1594
+#, elixir-autogen, elixir-format
+msgid "%{time} left"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:479
+#, elixir-autogen, elixir-format, fuzzy
+msgid "24h Volume"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:31
+#, elixir-autogen, elixir-format
+msgid "A healthy market typically has 10 active trending coins. When fewer coins are trending, it may indicate reduced market momentum or consolidation. This doesn't mean opportunities aren't available, but suggests extra caution and research before investing. Always <strong>DYOR (Do Your Own Research)</strong>."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:550
+#, elixir-autogen, elixir-format
+msgid "A link to confirm your email change has been sent to the new address."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:86
+#, elixir-autogen, elixir-format
+msgid "Access to signals"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:104
+#: lib/coin_tracker_web/components/layouts.ex:245
+#: lib/coin_tracker_web/live/user_live/settings.ex:42
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Admin"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:15
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Back to Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:131
+#, elixir-autogen, elixir-format
+msgid "Change Email"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:130
+#, elixir-autogen, elixir-format
+msgid "Changing..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:173
+#, elixir-autogen, elixir-format
+msgid "Choose a strong password with at least 12 characters"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:281
+#, elixir-autogen, elixir-format
+msgid "Click the button below to open Telegram:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:179
+#, elixir-autogen, elixir-format
+msgid "Confirm new password"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:320
+#, elixir-autogen, elixir-format
+msgid "Connect to Telegram"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:240
+#, elixir-autogen, elixir-format
+msgid "Connect your Telegram account to receive real-time position alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:324
+#, elixir-autogen, elixir-format
+msgid "Connect your Telegram to receive instant notifications about your trading positions."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:252
+#, elixir-autogen, elixir-format
+msgid "Connected"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:211
+#, elixir-autogen, elixir-format
+msgid "Critical Alert: Market health is at 0%%. No cryptocurrencies are currently active in the top performers list."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:37
+#, elixir-autogen, elixir-format
+msgid "Current Plan:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:248
+#, elixir-autogen, elixir-format
+msgid "DYOR (Do Your Own Research)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:244
+#, elixir-autogen, elixir-format
+msgid "Do not invest during this time."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:124
+#, elixir-autogen, elixir-format
+msgid "Email"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:107
+#, elixir-autogen, elixir-format
+msgid "Email Address"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:479
+#, elixir-autogen, elixir-format
+msgid "Email change link is invalid or it has expired."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:476
+#, elixir-autogen, elixir-format
+msgid "Email changed successfully."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:62
+#, elixir-autogen, elixir-format
+msgid "Expires on %{date}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:58
+#, elixir-autogen, elixir-format
+msgid "Full access to all features"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:318
+#, elixir-autogen, elixir-format
+msgid "Generating link..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:78
+#, elixir-autogen, elixir-format
+msgid "Lifetime Pro access"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:42
+#, elixir-autogen, elixir-format
+msgid "Limited market activity detected — only %{count} coins trending. Exercise increased caution."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:233
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:315
+#, elixir-autogen, elixir-format
+msgid "Market Health: %{percent}%"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "Market showing reduced activity — only %{count} coins in top 10 trending list."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:688
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1348
+#, elixir-autogen, elixir-format
+msgid "Max Price"
+msgstr ""
+
+#: lib/coin_tracker_web/components/signal_helpers.ex:14
+#: lib/coin_tracker_web/components/signal_helpers.ex:73
+#: lib/coin_tracker_web/components/signal_helpers.ex:153
+#: lib/coin_tracker_web/components/signal_helpers.ex:183
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:634
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:653
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:709
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1293
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1313
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1369
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:167
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:188
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:200
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:225
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:250
+#, elixir-autogen, elixir-format
+msgid "N/A"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:171
+#, elixir-autogen, elixir-format
+msgid "New password"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:448
+#, elixir-autogen, elixir-format
+msgid "No History Yet"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:219
+#, elixir-autogen, elixir-format
+msgid "No trending coins detected — market activity has completely stalled."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:256
+#, elixir-autogen, elixir-format
+msgid "Not connected"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:288
+#, elixir-autogen, elixir-format
+msgid "Open Telegram Bot"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:294
+#, elixir-autogen, elixir-format
+msgid "Or copy the link manually"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:142
+#, elixir-autogen, elixir-format
+msgid "Password"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:405
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:465
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1122
+#, elixir-autogen, elixir-format
+msgid "Price"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:181
+#, elixir-autogen, elixir-format
+msgid "Re-enter your new password to confirm"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:188
+#, elixir-autogen, elixir-format
+msgid "Save Password"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:187
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Saving..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:451
+#, elixir-autogen, elixir-format
+msgid "Snapshot history will appear here as the signal is tracked over time."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:248
+#, elixir-autogen, elixir-format
+msgid "Status:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:25
+#, elixir-autogen, elixir-format
+msgid "Subscription Status"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:237
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Telegram Integration"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:87
+#, elixir-autogen, elixir-format
+msgid "Telegram notifications"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:241
+#, elixir-autogen, elixir-format
+msgid "The market is showing no trending activity whatsoever. This is an extremely rare condition that typically indicates either a major market event, technical issues with data collection, or a period of complete market stagnation."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:110
+#, elixir-autogen, elixir-format
+msgid "Update your email address for account access"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:145
+#, elixir-autogen, elixir-format
+msgid "Update your password to keep your account secure"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:83
+#, elixir-autogen, elixir-format
+msgid "Upgrade to Pro for premium features:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:61
+#, elixir-autogen, elixir-format
+msgid "Very limited market activity — only %{count} %{coin_text} trending. High risk conditions."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:28
+#, elixir-autogen, elixir-format
+msgid "View and manage your subscription"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:399
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Vol"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:245
+#, elixir-autogen, elixir-format
+msgid "Wait for market signals to return and conditions to normalize before taking any positions. Always"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:286
+#, elixir-autogen, elixir-format
+msgid "Warning: Market health is at %{percent}%%. Only %{count} out of 10 cryptocurrencies are currently active in the top performers list."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:126
+#, elixir-autogen, elixir-format
+msgid "We'll send a confirmation link to your new email address"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:66
+#, elixir-autogen, elixir-format
+msgid "With only %{count} %{coin_text} in the top 10, the market is experiencing very low momentum. This is a strong indicator of increased risk and potential volatility. During these periods, many traders choose to remain in stable assets or wait for clearer market signals. If you decide to invest, use extreme caution, smaller position sizes, and tight risk management. Always <strong>DYOR (Do Your Own Research)</strong>."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:46
+#, elixir-autogen, elixir-format
+msgid "With only %{count} coins in the top 10, the market is showing significantly reduced momentum. This often correlates with higher volatility and risk. Historically, reduced trending activity can precede both market corrections and consolidation periods. If you choose to invest during this period, consider smaller positions and tighter stop-losses. Always <strong>DYOR (Do Your Own Research)</strong>."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:266
+#, elixir-autogen, elixir-format
+msgid "Your Telegram account is connected. You'll receive alerts about your positions."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:73
+#, elixir-autogen, elixir-format
+msgid "Your subscription will expire soon!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:249
+#, elixir-autogen, elixir-format
+msgid "before investing."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:54
+#, elixir-autogen, elixir-format, fuzzy
+msgid "coin"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:54
+#, elixir-autogen, elixir-format
+msgid "coins"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:500
+#, elixir-autogen, elixir-format
+msgid "All rights reserved."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "By leveraging on-chain analysis and market indicators, you'll know exactly when a coin is ready to pump, and exactly when to take profits before the dump."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:428
+#, elixir-autogen, elixir-format
+msgid "Can I track multiple positions?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:386
+#, elixir-autogen, elixir-format
+msgid "Connect your Telegram account in settings and you'll receive instant notifications for signals, position updates, and market status changes."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:227
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:285
+#: lib/coin_tracker_web/live/position_live/new.html.heex:168
+#: lib/coin_tracker_web/live/position_live/new.html.heex:226
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:149
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:178
+#, elixir-autogen, elixir-format
+msgid "Copied!"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:309
+#, elixir-autogen, elixir-format
+msgid "Create a free account and start receiving on-chain signals. No credit card required."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:108
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Everything you need to trade smarter"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:447
+#: lib/coin_tracker_web/components/layouts.ex:493
+#, elixir-autogen, elixir-format
+msgid "FAQs"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:444
+#: lib/coin_tracker_web/components/layouts.ex:490
+#, elixir-autogen, elixir-format
+msgid "Features"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:355
+#, elixir-autogen, elixir-format
+msgid "Frequently asked questions"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:177
+#: lib/coin_tracker_web/components/layouts.ex:280
+#: lib/coin_tracker_web/components/layouts.ex:462
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Get Started"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:20
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:318
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Get Started Free"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:127
+#, elixir-autogen, elixir-format
+msgid "Get alerts on coins with high probability setups based on on-chain analysis and market indicators."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:197
+#, elixir-autogen, elixir-format
+msgid "Get notified the moment a coin shows bullish on-chain activity."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:418
+#, elixir-autogen, elixir-format
+msgid "How accurate are the signals?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:463
+#, elixir-autogen, elixir-format
+msgid "How do I get started?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:383
+#, elixir-autogen, elixir-format
+msgid "How do I receive alerts?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:358
+#, elixir-autogen, elixir-format
+msgid "If you have anything else you want to ask,"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:393
+#, elixir-autogen, elixir-format
+msgid "Is my data secure?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:443
+#, elixir-autogen, elixir-format
+msgid "Is there a free plan?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:157
+#, elixir-autogen, elixir-format
+msgid "Know when the market is bullish, bearish, or ranging so you can adjust your strategy accordingly."
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:484
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:8
+#, elixir-autogen, elixir-format
+msgid "Know when to buy. Know when to sell."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:26
+#, elixir-autogen, elixir-format
+msgid "Learn More"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:171
+#: lib/coin_tracker_web/components/layouts.ex:274
+#: lib/coin_tracker_web/components/layouts.ex:456
+#, elixir-autogen, elixir-format
+msgid "Log in"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:233
+#, elixir-autogen, elixir-format
+msgid "Market Analysis"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:456
+#, elixir-autogen, elixir-format
+msgid "Market status shows you whether the overall crypto market is bullish, bearish, or ranging, helping you adjust your trading strategy."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:105
+#, elixir-autogen, elixir-format
+msgid "Negative for loss, positive to lock in profits"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:223
+#, elixir-autogen, elixir-format
+msgid "Never miss a signal with instant Telegram notifications."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:124
+#, elixir-autogen, elixir-format, fuzzy
+msgid "On-chain Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:376
+#, elixir-autogen, elixir-format
+msgid "On-chain signals are trading indicators derived from blockchain data, such as wallet movements, exchange flows, and smart contract interactions that often precede price movements."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:421
+#, elixir-autogen, elixir-format
+msgid "Our signals are based on proven on-chain analysis methods. While no signal is guaranteed, our data helps you make more informed decisions."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:259
+#, elixir-autogen, elixir-format
+msgid "Portfolio Overview"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:207
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Position Tracking"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:148
+#, elixir-autogen, elixir-format
+msgid "Positive for profit target, negative to short"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/new.html.heex:82
+#, elixir-autogen, elixir-format
+msgid "Positive values are auto-converted to negative"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:246
+#, elixir-autogen, elixir-format
+msgid "Price History"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:194
+#, elixir-autogen, elixir-format
+msgid "Real-time Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:142
+#, elixir-autogen, elixir-format
+msgid "Receive Telegram notifications when your positions hit key thresholds or stop-loss levels."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:262
+#, elixir-autogen, elixir-format
+msgid "See your entire portfolio performance at a glance."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:466
+#, elixir-autogen, elixir-format
+msgid "Simply create a free account, connect your Telegram for alerts, and start adding positions to track. It takes less than 2 minutes."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:139
+#, elixir-autogen, elixir-format
+msgid "Smart Alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:306
+#, elixir-autogen, elixir-format
+msgid "Start tracking today"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:175
+#, elixir-autogen, elixir-format
+msgid "Take control of your crypto journey"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:192
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:250
+#: lib/coin_tracker_web/live/position_live/new.html.heex:133
+#: lib/coin_tracker_web/live/position_live/new.html.heex:191
+#, elixir-autogen, elixir-format
+msgid "Tap to copy price"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:220
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Telegram Alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:249
+#, elixir-autogen, elixir-format
+msgid "Track price movements and identify patterns over time."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:210
+#, elixir-autogen, elixir-format
+msgid "Track your entries, exits, and profits all in one place."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:236
+#, elixir-autogen, elixir-format
+msgid "Understand market conditions with our comprehensive analysis tools."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:411
+#, elixir-autogen, elixir-format
+msgid "We currently support major exchanges including Binance, MEXC, and more. Position tracking works regardless of where you trade."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:396
+#, elixir-autogen, elixir-format
+msgid "We take security seriously. Your data is encrypted at rest and in transit, and we never share your information with third parties."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:373
+#, elixir-autogen, elixir-format
+msgid "What are on-chain signals?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:408
+#, elixir-autogen, elixir-format
+msgid "What exchanges are supported?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:453
+#, elixir-autogen, elixir-format
+msgid "What is market status?"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:446
+#, elixir-autogen, elixir-format
+msgid "Yes! Start with our free tier to access basic signals and position tracking. Upgrade anytime for advanced features."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:431
+#, elixir-autogen, elixir-format
+msgid "Yes! Track as many positions as you want with custom entry prices, target prices, and stop-loss levels for each."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:265
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:234
+#, elixir-autogen, elixir-format
+msgid "You already have an active Pro subscription."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:360
+#, elixir-autogen, elixir-format
+msgid "reach out to us"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:468
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1125
+#, elixir-autogen, elixir-format, fuzzy
+msgid "% Change"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:362
+#, elixir-autogen, elixir-format
+msgid "API Access"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:185
+#: lib/coin_tracker_web/live/user_live/settings.ex:88
+#, elixir-autogen, elixir-format
+msgid "API access"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:654
+#, elixir-autogen, elixir-format
+msgid "API token regenerated. Your old token is now invalid."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:419
+#, elixir-autogen, elixir-format
+msgid "Created %{date}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:146
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:103
+#: lib/coin_tracker_web/live/position_live/index.html.heex:266
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:640
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1299
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:357
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Entry"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:641
+#, elixir-autogen, elixir-format
+msgid "Failed to generate API token."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:657
+#, elixir-autogen, elixir-format
+msgid "Failed to regenerate API token."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:456
+#, elixir-autogen, elixir-format
+msgid "Generate API Token"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:365
+#, elixir-autogen, elixir-format
+msgid "Generate a personal access token to use the API"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:459
+#, elixir-autogen, elixir-format
+msgid "Generate a token to access the signals API programmatically."
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:399
+#, elixir-autogen, elixir-format
+msgid "I've copied my token"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:379
+#, elixir-autogen, elixir-format
+msgid "Make sure to copy your token now. You won't be able to see it again!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:275
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:614
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:631
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1272
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1290
+#, elixir-autogen, elixir-format
+msgid "Now"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:834
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1507
+#, elixir-autogen, elixir-format
+msgid "Peak"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:187
+#, elixir-autogen, elixir-format
+msgid "Query signals programmatically"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:440
+#, elixir-autogen, elixir-format
+msgid "Regenerate"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:432
+#, elixir-autogen, elixir-format
+msgid "This will invalidate your current token. Any applications using it will stop working. Continue?"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:412
+#, elixir-autogen, elixir-format
+msgid "Token:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:445
+#, elixir-autogen, elixir-format
+msgid "Use this token in the Authorization header: Bearer <token>"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:858
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:869
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1533
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1544
+#, elixir-autogen, elixir-format
+msgid "now"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:66
+#, elixir-autogen, elixir-format
+msgid " - Compare current price vs initial price when the signal was detected."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:92
+#, elixir-autogen, elixir-format
+msgid " - How long has this coin been trending? Newer signals may have more upside potential."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:50
+#, elixir-autogen, elixir-format
+msgid " - Rising volume is a positive sign. It indicates increasing interest and trading activity. Check the volume increase percentage."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:79
+#, elixir-autogen, elixir-format
+msgid " - Signals in the top 10 are actively trending. Lower positions indicate stronger momentum."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:107
+#, elixir-autogen, elixir-format
+msgid " Always do your own research. Signals are informational only and not financial advice."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:111
+#, elixir-autogen, elixir-format
+msgid "%{app} combines on-chain data, market analysis, and real-time alerts to give you an edge in the crypto market."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:415
+#, elixir-autogen, elixir-format
+msgid "%{d}d %{h}h ago"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:416
+#, elixir-autogen, elixir-format
+msgid "%{d}d ago"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:407
+#, elixir-autogen, elixir-format
+msgid "%{h}h %{m}m ago"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:408
+#, elixir-autogen, elixir-format
+msgid "%{h}h ago"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:400
+#, elixir-autogen, elixir-format
+msgid "%{n}m ago"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:67
+#, elixir-autogen, elixir-format
+msgid "%{symbol} is currently active"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:221
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:84
+#, elixir-autogen, elixir-format
+msgid "1 occurrence"
+msgid_plural "%{count} occurrences"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:167
+#, elixir-autogen, elixir-format, fuzzy
+msgid "1 symbol"
+msgid_plural "%{count} symbols"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:171
+#, elixir-autogen, elixir-format
+msgid "1 total signal"
+msgid_plural "%{count} total signals"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:220
+#, elixir-autogen, elixir-format
+msgid "24h"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:471
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1128
+#, elixir-autogen, elixir-format
+msgid "24h Market"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:372
+#, elixir-autogen, elixir-format
+msgid "24h:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:167
+#, elixir-autogen, elixir-format
+msgid "API Key"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:173
+#, elixir-autogen, elixir-format
+msgid "API Secret"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:38
+#, elixir-autogen, elixir-format
+msgid "Access real-time trading signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:101
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:209
+#, elixir-autogen, elixir-format
+msgid "Active"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:20
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Active Positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:119
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:203
+#, elixir-autogen, elixir-format
+msgid "Add Exchange Credential"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:139
+#, elixir-autogen, elixir-format
+msgid "After evaluating a signal, execute your trade on your preferred exchange (Binance, Bitget, MEXC, etc.). Make sure to note down:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:40
+#, elixir-autogen, elixir-format
+msgid "After sending"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:77
+#, elixir-autogen, elixir-format
+msgid "All"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:172
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:159
+#, elixir-autogen, elixir-format
+msgid "Amount"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:118
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:160
+#, elixir-autogen, elixir-format
+msgid "Amount (USDT)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:55
+#: lib/coin_tracker_web/live/position_live/new.html.heex:69
+#, elixir-autogen, elixir-format
+msgid "Amount Invested"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:262
+#, elixir-autogen, elixir-format
+msgid "Amount Invested (Optional)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:326
+#, elixir-autogen, elixir-format
+msgid "Amount must be a positive number"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:109
+#, elixir-autogen, elixir-format
+msgid "Auto"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:132
+#, elixir-autogen, elixir-format
+msgid "Available:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "Back to Historical"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:111
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Back to Plans"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:70
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Back to signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:174
+#, elixir-autogen, elixir-format
+msgid "Best Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:130
+#, elixir-autogen, elixir-format
+msgid "Binance API Key Setup Guide"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:155
+#, elixir-autogen, elixir-format
+msgid "Binance Spot"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:418
+#, elixir-autogen, elixir-format
+msgid "Bought %{symbol}. OCO order placed on Binance."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:333
+#, elixir-autogen, elixir-format
+msgid "Browse our complete historical signal data. See every signal we've ever called, with entry prices, peak prices, and exit prices. The track record speaks for itself."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:133
+#, elixir-autogen, elixir-format
+msgid "Buy on Your Preferred Exchange"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:101
+#, elixir-autogen, elixir-format
+msgid "Cancel Payment Request"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:402
+#, elixir-autogen, elixir-format
+msgid "Check the Market Status page to gauge overall market health before trading."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:154
+#, elixir-autogen, elixir-format
+msgid "Click to copy"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:183
+#, elixir-autogen, elixir-format
+msgid "Click to copy - send exact amount"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:118
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Closed"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:15
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Closed Positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:87
+#, elixir-autogen, elixir-format
+msgid "Closed positions will appear here."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:220
+#, elixir-autogen, elixir-format
+msgid "Coming Soon"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:16
+#, elixir-autogen, elixir-format
+msgid "Complete Your Payment"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:91
+#, elixir-autogen, elixir-format
+msgid "Confirm"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:220
+#, elixir-autogen, elixir-format
+msgid "Confirm & Buy"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:297
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Connect your Telegram account to receive real-time alerts. Once connected, you'll receive:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:139
+#, elixir-autogen, elixir-format
+msgid "Could not load balance"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:176
+#: lib/coin_tracker_web/live/signal_live/show.ex:138
+#, elixir-autogen, elixir-format
+msgid "Could not start watching this signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:192
+#: lib/coin_tracker_web/live/signal_live/show.ex:156
+#, elixir-autogen, elixir-format
+msgid "Could not stop watching this signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:276
+#, elixir-autogen, elixir-format
+msgid "Create Your First Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:189
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Create a Position in the App"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:373
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Created"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:232
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Creating position..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:266
+#, elixir-autogen, elixir-format
+msgid "Credential not found."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:261
+#, elixir-autogen, elixir-format
+msgid "Credential removed."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:230
+#, elixir-autogen, elixir-format
+msgid "Credential saved successfully."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:77
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Current price:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:106
+#, elixir-autogen, elixir-format
+msgid "DYOR:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:133
+#, elixir-autogen, elixir-format
+msgid "Do NOT enable withdrawal permissions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:235
+#, elixir-autogen, elixir-format
+msgid "Do not close this page."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/edit.html.heex:57
+#: lib/coin_tracker_web/live/position_live/new.html.heex:71
+#, elixir-autogen, elixir-format
+msgid "Dollar amount invested (optional)"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:330
+#, elixir-autogen, elixir-format
+msgid "Don't just take our word for it"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1772
+#, elixir-autogen, elixir-format
+msgid "Dropped from top 10 — grace period"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:213
+#, elixir-autogen, elixir-format
+msgid "Edit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:114
+#, elixir-autogen, elixir-format
+msgid "Edit Transaction ID"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:132
+#, elixir-autogen, elixir-format
+msgid "Enable \"Spot Trading\" permission only"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:163
+#, elixir-autogen, elixir-format
+msgid "Enjoy signals, alerts, and all Pro features"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:102
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:313
+#, elixir-autogen, elixir-format
+msgid "Entered"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:364
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Entry Rank"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:193
+#, elixir-autogen, elixir-format
+msgid "Est. Loss"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:188
+#, elixir-autogen, elixir-format
+msgid "Est. Profit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:174
+#, elixir-autogen, elixir-format
+msgid "Est. Quantity"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:32
+#, elixir-autogen, elixir-format
+msgid "Evaluate Incoming Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:281
+#, elixir-autogen, elixir-format
+msgid "Every prior time this symbol appeared in the top 10, with entry, top and exit prices plus time per position."
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:14
+#, elixir-autogen, elixir-format
+msgid "Every symbol that has appeared in the top 10, with full occurrence history."
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:23
+#, elixir-autogen, elixir-format
+msgid "Every time %{symbol} appeared in the top 10, with entry, top and exit prices plus time per position."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:14
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:41
+#: lib/coin_tracker_web/live/user_live/settings.ex:339
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Exchange API Keys"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:90
+#, elixir-autogen, elixir-format
+msgid "Exchange credentials required"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:170
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:106
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:381
+#, elixir-autogen, elixir-format
+msgid "Exit"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:115
+#: lib/coin_tracker_web/live/position_live/index.ex:359
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:326
+#, elixir-autogen, elixir-format
+msgid "Exited"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:357
+#, elixir-autogen, elixir-format
+msgid "Exited %{ago}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1774
+#, elixir-autogen, elixir-format
+msgid "Exited top 10"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:343
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Failed to cancel payment. Please try again."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:336
+#, elixir-autogen, elixir-format
+msgid "Failed to create new payment request."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:247
+#, elixir-autogen, elixir-format
+msgid "Failed to create payment request."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:314
+#, elixir-autogen, elixir-format
+msgid "Failed to submit transaction ID. Please try again."
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:181
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Feature Flags"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:297
+#, elixir-autogen, elixir-format
+msgid "First time %{symbol} has been in the top 10."
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:178
+#, elixir-autogen, elixir-format, fuzzy
+msgid "From signal tracking to portfolio management, %{app} gives you the tools to succeed."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:291
+#, elixir-autogen, elixir-format
+msgid "Get Telegram Notifications"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1729
+#, elixir-autogen, elixir-format
+msgid "Get Telegram alerts for top-10 entry/exit and price surges (5%% milestones since entering the top 10)."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:12
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Getting Started"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:265
+#, elixir-autogen, elixir-format
+msgid "Go back"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:67
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:192
+#, elixir-autogen, elixir-format
+msgid "Go to Positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:367
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Go to Settings"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:356
+#, elixir-autogen, elixir-format
+msgid "Go to Settings and find your Telegram connection code"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:231
+#, elixir-autogen, elixir-format
+msgid "Got it! We'll be in touch."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:354
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Grace period"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:352
+#, elixir-autogen, elixir-format
+msgid "Grace period — dropped %{ago}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:115
+#, elixir-autogen, elixir-format
+msgid "Held"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:84
+#: lib/coin_tracker_web/components/layouts.ex:225
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Historical"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.ex:23
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:11
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Historical Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "History of %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:14
+#, elixir-autogen, elixir-format
+msgid "History of your closed positions and their performance"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.ex:42
+#, elixir-autogen, elixir-format
+msgid "History: %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:163
+#, elixir-autogen, elixir-format
+msgid "How much you invested in dollars."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:235
+#, elixir-autogen, elixir-format
+msgid "How often you want to receive gain alerts. For example, setting 2 will alert you at +2%, +4%, +6%, etc."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:353
+#, elixir-autogen, elixir-format, fuzzy
+msgid "How to connect Telegram:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:328
+#, elixir-autogen, elixir-format
+msgid "Immediate notification when a position drops below your stop-loss percentage."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:94
+#, elixir-autogen, elixir-format
+msgid "In Top Since"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:89
+#, elixir-autogen, elixir-format
+msgid "In the confirmation after sending"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:349
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1770
+#, elixir-autogen, elixir-format, fuzzy
+msgid "In top 10"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:347
+#, elixir-autogen, elixir-format
+msgid "In top — #%{rank}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:87
+#, elixir-autogen, elixir-format
+msgid "In your wallet's transaction history"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:126
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:213
+#, elixir-autogen, elixir-format
+msgid "Inactive"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:112
+#: lib/coin_tracker_web/live/position_live/index.html.heex:289
+#, elixir-autogen, elixir-format
+msgid "Invested"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:161
+#, elixir-autogen, elixir-format
+msgid "Label (optional)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:75
+#, elixir-autogen, elixir-format
+msgid "Last used: %{date}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:15
+#, elixir-autogen, elixir-format
+msgid "Learn how to use %{app} to track your crypto positions and get notified on Telegram."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:128
+#, elixir-autogen, elixir-format
+msgid "Loading balance..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "Losing"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:352
+#, elixir-autogen, elixir-format
+msgid "Manage Exchange Keys"
+msgstr ""
+
+#: lib/coin_tracker_web/live/user_live/settings.ex:342
+#, elixir-autogen, elixir-format
+msgid "Manage your exchange API credentials for automatic trading"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:44
+#, elixir-autogen, elixir-format
+msgid "Manage your exchange API credentials for automatic trading."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:202
+#, elixir-autogen, elixir-format
+msgid "Manual"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:189
+#, elixir-autogen, elixir-format
+msgid "Network"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:361
+#, elixir-autogen, elixir-format
+msgid "Never in top 10"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1776
+#, elixir-autogen, elixir-format, fuzzy
+msgid "No active signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:81
+#, elixir-autogen, elixir-format
+msgid "No closed positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.ex:28
+#, elixir-autogen, elixir-format
+msgid "No history found for this symbol."
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:188
+#, elixir-autogen, elixir-format
+msgid "No symbols match your search."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1740
+#, elixir-autogen, elixir-format
+msgid "Nothing watched yet"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:344
+#, elixir-autogen, elixir-format
+msgid "Notification when your position reaches your target profit percentage."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:312
+#, elixir-autogen, elixir-format
+msgid "Notifications when your position reaches each threshold level (based on your Alert Every % setting)."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:246
+#, elixir-autogen, elixir-format
+msgid "Notify me"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:195
+#, elixir-autogen, elixir-format
+msgid "Now track your trade by creating a position. Here's what each field means:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:88
+#, elixir-autogen, elixir-format
+msgid "On Tronscan after searching your address"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:149
+#, elixir-autogen, elixir-format
+msgid "Once verified, you'll get Pro access for 30 days"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:197
+#, elixir-autogen, elixir-format
+msgid "Only send via TRC-20!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:357
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Open our Telegram bot"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:135
+#, elixir-autogen, elixir-format
+msgid "Our team will check the blockchain for your transaction"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:51
+#, elixir-autogen, elixir-format
+msgid "Paste your Transaction ID"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:271
+#, elixir-autogen, elixir-format
+msgid "Payment"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:226
+#, elixir-autogen, elixir-format
+msgid "Payment Pending"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:331
+#, elixir-autogen, elixir-format
+msgid "Payment cancelled. A new payment request was created."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:209
+#, elixir-autogen, elixir-format
+msgid "Payment expires:"
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts/admin.html.heex:32
+#, elixir-autogen, elixir-format
+msgid "Payments"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:164
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Payments Management"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:246
+#, elixir-autogen, elixir-format
+msgid "Peak Gain"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:158
+#, elixir-autogen, elixir-format
+msgid "Performance Metrics"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:231
+#, elixir-autogen, elixir-format
+msgid "Placing OCO sell order..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:230
+#, elixir-autogen, elixir-format
+msgid "Placing market buy..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:284
+#, elixir-autogen, elixir-format
+msgid "Please enter your transaction ID."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:227
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:214
+#, elixir-autogen, elixir-format
+msgid "Please log in to continue."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:109
+#, elixir-autogen, elixir-format
+msgid "PnL"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:76
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Position Rank"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:152
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Position actions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:33
+#, elixir-autogen, elixir-format
+msgid "Position removed"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:163
+#, elixir-autogen, elixir-format
+msgid "Preview Order"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:276
+#, elixir-autogen, elixir-format
+msgid "Previous occurrences of %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:460
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Price (USD)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:63
+#, elixir-autogen, elixir-format
+msgid "Price Movement"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:196
+#, elixir-autogen, elixir-format
+msgid "Price Performance"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:379
+#, elixir-autogen, elixir-format
+msgid "Pro Tips"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:203
+#, elixir-autogen, elixir-format
+msgid "Rank change since you opened the position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:150
+#, elixir-autogen, elixir-format
+msgid "Recently Exited"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:224
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:225
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:310
+#, elixir-autogen, elixir-format
+msgid "Remove position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:222
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:308
+#, elixir-autogen, elixir-format
+msgid "Remove this position from your history? This cannot be undone."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:135
+#, elixir-autogen, elixir-format
+msgid "Restrict to your IP address for maximum security (recommended)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:167
+#, elixir-autogen, elixir-format
+msgid "Review and process payment requests for Pro subscriptions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:182
+#, elixir-autogen, elixir-format
+msgid "Save Credential"
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:52
+#, elixir-autogen, elixir-format
+msgid "Saved Credentials"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:52
+#, elixir-autogen, elixir-format
+msgid "Search by symbol or name..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:215
+#, elixir-autogen, elixir-format
+msgid "Select the exchange where you bought the coin. We'll fetch prices from this exchange for accurate tracking."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:19
+#, elixir-autogen, elixir-format
+msgid "Send USDT and submit your transaction ID"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:131
+#, elixir-autogen, elixir-format
+msgid "Send USDT to this address"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:358
+#, elixir-autogen, elixir-format
+msgid "Send the /start command followed by your connection code"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:386
+#, elixir-autogen, elixir-format
+msgid "Set realistic stop-loss levels to protect your capital (5-15% is common)."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:100
+#, elixir-autogen, elixir-format
+msgid "Set up API keys"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:80
+#, elixir-autogen, elixir-format
+msgid "Set up API keys to trade"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:47
+#, elixir-autogen, elixir-format
+msgid "Set up Telegram alerts for your positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:425
+#, elixir-autogen, elixir-format
+msgid "Show %{count} more"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:423
+#, elixir-autogen, elixir-format
+msgid "Show fewer"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:150
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:251
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.ex:36
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Signal: %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:405
+#, elixir-autogen, elixir-format
+msgid "Sort by 24h Volume Change"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1743
+#, elixir-autogen, elixir-format
+msgid "Star a signal in the Top 10 & Grace tab to start watching it."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:154
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Stop Loss (%)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:333
+#, elixir-autogen, elixir-format
+msgid "Stop loss must be a positive percentage"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:325
+#, elixir-autogen, elixir-format
+msgid "Stop-Loss Alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:188
+#: lib/coin_tracker_web/live/signal_live/show.ex:150
+#, elixir-autogen, elixir-format
+msgid "Stopped watching %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:70
+#, elixir-autogen, elixir-format
+msgid "Submit Transaction ID"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "Summary"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:147
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Take Profit (%)"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:330
+#, elixir-autogen, elixir-format
+msgid "Take profit must be a positive percentage"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:341
+#, elixir-autogen, elixir-format
+msgid "Take-Profit Alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:86
+#, elixir-autogen, elixir-format
+msgid "Thank you! We're verifying your transaction."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:265
+#, elixir-autogen, elixir-format
+msgid "The dollar amount you invested. If provided, we'll show your profit/loss in dollars, not just percentages."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:152
+#, elixir-autogen, elixir-format
+msgid "The exact price at which you bought the coin."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:245
+#, elixir-autogen, elixir-format
+msgid "The percentage drop that triggers a stop-loss alert. Enter as a positive number (e.g., 10 for -10%). You'll be alerted when the price drops below this threshold."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:205
+#, elixir-autogen, elixir-format
+msgid "The ticker symbol of your coin (e.g., BTC, ETH, SOL). This is used to fetch live prices."
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/index.html.heex:28
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "There is 1 active signal right now. Upgrade to Pro to unlock real-time access."
+msgid_plural "There are %{count} active signals right now. Upgrade to Pro to unlock real-time access."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:20
+#, elixir-autogen, elixir-format
+msgid "This feature is not available yet."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:308
+#, elixir-autogen, elixir-format
+msgid "This payment has already been processed."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:201
+#, elixir-autogen, elixir-format
+msgid "This places a real market buy + OCO sell order on Binance. The exchange manages TP/SL automatically. You will need to close the app position manually when the OCO fills."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:309
+#, elixir-autogen, elixir-format
+msgid "Threshold Alerts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:164
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:89
+#, elixir-autogen, elixir-format
+msgid "Time in Top"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:134
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:345
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Time in top"
+msgstr ""
+
+#: lib/coin_tracker_web/live/admin_live/dashboard.html.heex:184
+#, elixir-autogen, elixir-format
+msgid "Toggle features on or off for all users or specific accounts"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:154
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:365
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Top"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:109
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Top 10 & Grace"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:498
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Top 10 Position"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:33
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Total PnL"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:41
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Total Trades"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:56
+#, elixir-autogen, elixir-format
+msgid "Track unlimited positions"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:40
+#: lib/coin_tracker_web/live/signal_live/trade.ex:73
+#, elixir-autogen, elixir-format
+msgid "Trade %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:251
+#, elixir-autogen, elixir-format
+msgid "Trade failed"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:71
+#, elixir-autogen, elixir-format
+msgid "Trade this signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:962
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1654
+#, elixir-autogen, elixir-format
+msgid "Trading volume change since this coin was first detected as a signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:82
+#, elixir-autogen, elixir-format
+msgid "Transaction ID Submitted!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:301
+#, elixir-autogen, elixir-format
+msgid "Transaction ID submitted! We'll verify and activate your subscription."
+msgstr ""
+
+#: lib/coin_tracker_web/components/layouts.ex:91
+#: lib/coin_tracker_web/components/layouts.ex:232
+#: lib/coin_tracker_web/live/tutorial_live.ex:6
+#, elixir-autogen, elixir-format
+msgid "Tutorial"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.ex:203
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:66
+#, elixir-autogen, elixir-format
+msgid "Unknown"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1798
+#, elixir-autogen, elixir-format
+msgid "Unwatch"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:769
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:924
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1449
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1616
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:39
+#, elixir-autogen, elixir-format
+msgid "Unwatch %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:394
+#, elixir-autogen, elixir-format
+msgid "Use the \"Alert Every %\" to avoid notification overload. Start with 5% increments."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:177
+#, elixir-autogen, elixir-format
+msgid "Verification typically takes 1-24 hours"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1787
+#, elixir-autogen, elixir-format
+msgid "View"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:91
+#, elixir-autogen, elixir-format
+msgid "View Active Positions"
+msgstr ""
+
+#: lib/coin_tracker_web/controllers/page_html/home.html.heex:343
+#, elixir-autogen, elixir-format
+msgid "View Historical Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:198
+#, elixir-autogen, elixir-format, fuzzy
+msgid "View Settings"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:118
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:73
+#, elixir-autogen, elixir-format, fuzzy
+msgid "View Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:75
+#, elixir-autogen, elixir-format
+msgid "View active signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:108
+#, elixir-autogen, elixir-format
+msgid "View on Tronscan"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:221
+#, elixir-autogen, elixir-format
+msgid "Volume Growth"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:410
+#, elixir-autogen, elixir-format
+msgid "Volume is key - increasing volume often precedes price movement."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:788
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1468
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "Watch"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:771
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:928
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1451
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1620
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "Watch %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:143
+#, elixir-autogen, elixir-format
+msgid "Watch not found"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:140
+#, elixir-autogen, elixir-format
+msgid "Watch removed"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:124
+#, elixir-autogen, elixir-format
+msgid "Watched"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1726
+#, elixir-autogen, elixir-format
+msgid "Watched Signals"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:788
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1468
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "Watching"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.ex:172
+#: lib/coin_tracker_web/live/signal_live/show.ex:134
+#, elixir-autogen, elixir-format
+msgid "Watching %{symbol}"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:176
+#, elixir-autogen, elixir-format
+msgid "We pull fresh on-chain data approximately every 15 minutes."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:132
+#, elixir-autogen, elixir-format
+msgid "We verify your payment"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:179
+#, elixir-autogen, elixir-format
+msgid "We'll notify you once your payment is verified and your subscription is active."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:223
+#, elixir-autogen, elixir-format
+msgid "We're still working on this. Leave your email and we'll reach out when it's ready."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:122
+#, elixir-autogen, elixir-format
+msgid "What happens next?"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:28
+#, elixir-autogen, elixir-format
+msgid "What you can do now"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:38
+#, elixir-autogen, elixir-format
+msgid "When a new signal arrives, take time to evaluate the coin before making any decisions. Here's what to look for:"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:84
+#, elixir-autogen, elixir-format
+msgid "Where to find your Transaction ID?"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:174
+#, elixir-autogen, elixir-format
+msgid "Which exchange you used for the trade."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:49
+#, elixir-autogen, elixir-format
+msgid "Winning"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/closed.html.heex:84
+#, elixir-autogen, elixir-format, fuzzy
+msgid "You haven't closed any positions yet."
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/trade.ex:93
+#, elixir-autogen, elixir-format
+msgid "You need to set up your Binance API key before you can trade."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:19
+#, elixir-autogen, elixir-format
+msgid "You're a pro now!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:160
+#, elixir-autogen, elixir-format
+msgid "You're all set!"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:359
+#, elixir-autogen, elixir-format
+msgid "You're all set! You'll start receiving alerts immediately."
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:93
+#, elixir-autogen, elixir-format
+msgid "Your Transaction ID"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:146
+#, elixir-autogen, elixir-format
+msgid "Your account is upgraded"
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:225
+#, elixir-autogen, elixir-format
+msgid "Your buy price. This is used to calculate your profit/loss percentage."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:137
+#, elixir-autogen, elixir-format
+msgid "Your keys are encrypted at rest with AES-256-GCM"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/pending.ex:23
+#, elixir-autogen, elixir-format
+msgid "Your payment has been verified and your Pro subscription is now active."
+msgstr ""
+
+#: lib/coin_tracker_web/live/tutorial_live.html.heex:255
+#, elixir-autogen, elixir-format
+msgid "Your target gain percentage. You'll receive an alert when the price reaches this level above your entry."
+msgstr ""
+
+#: lib/coin_tracker_web/live/settings_live/exchange_keys.ex:162
+#, elixir-autogen, elixir-format
+msgid "e.g., Main account"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/payment.ex:60
+#, elixir-autogen, elixir-format
+msgid "e.g., a1b2c3d4e5f6..."
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.ex:397
+#, elixir-autogen, elixir-format
+msgid "just now"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:186
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:397
+#, elixir-autogen, elixir-format
+msgid "no position history"
+msgstr ""
+
+#: lib/coin_tracker_web/live/historical_live/show.html.heex:128
+#: lib/coin_tracker_web/live/signal_live/show.html.heex:339
+#, elixir-autogen, elixir-format
+msgid "still active"
+msgstr ""
+
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:721
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:989
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1381
+#: lib/coin_tracker_web/live/signal_live/index.html.heex:1681
+#, elixir-autogen, elixir-format
+msgid "vol since signal"
+msgstr ""
+
+#: lib/coin_tracker_web/live/position_live/index.html.heex:208
+#, elixir-autogen, elixir-format
+msgid "vs entry"
+msgstr ""
+
+#: lib/coin_tracker_web/live/upgrade_live/index.ex:239
+#, elixir-autogen, elixir-format
+msgid "you@example.com"
+msgstr ""

@@ -1,0 +1,62 @@
+name: Format
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    # Skip for fork PRs: GITHUB_TOKEN has no write access on forks, so the
+    # auto-commit step would fail. Forks should be guarded by a separate
+    # check-only path if needed in the future.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+
+    steps:
+    - name: Checkout PR branch
+      uses: actions/checkout@v4
+      with:
+        # GITHUB_HEAD_REF / github.head_ref is the PR source branch.
+        # Used as a checkout parameter (not in a shell run:) so no injection risk.
+        ref: ${{ github.head_ref }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.17.x'
+        otp-version: '27.x'
+
+    - name: Restore dependencies cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          deps
+          _build
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+        restore-keys: ${{ runner.os }}-mix-
+
+    - name: Install dependencies
+      run: mix deps.get
+
+    - name: Compile dependencies
+      run: mix deps.compile
+
+    - name: Run mix format
+      run: mix format
+
+    - name: Commit and push formatting changes
+      run: |
+        if [[ -n "$(git status --porcelain)" ]]; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: mix format"
+          git push
+        fi
+
+    - name: Check formatting
+      run: mix format --check-formatted

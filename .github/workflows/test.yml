@@ -1,0 +1,66 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+env:
+  MIX_ENV: test
+  # Dummy values for CI only — the app boots in strict mode (no in-repo defaults).
+  # These are not secrets; production values come from real env/secret stores.
+  SECRET_KEY_BASE: ci_only_secret_key_base_padding_padding_padding_padding_padding_xx
+  LIVE_VIEW_SIGNING_SALT: ci_only_signing_salt
+  APP_NAME: CoinTracker
+  SENDER_EMAIL: noreply@example.com
+  SUPPORT_EMAIL: support@example.com
+  ADMIN_NOTIFICATION_EMAIL: admin@example.com
+  USDT_CONTRACT_ADDRESS: TPlaceholderUsdtContractForCiOnly00
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: coin_tracker_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5433:5432
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.17.x'
+        otp-version: '27.x'
+
+    - name: Restore dependencies cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          deps
+          _build
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+        restore-keys: ${{ runner.os }}-mix-
+
+    - name: Install dependencies
+      run: mix deps.get
+
+    - name: Compile dependencies
+      run: mix deps.compile
+
+    - name: Compile project
+      run: mix compile --warnings-as-errors
+
+    - name: Run tests
+      run: mix test

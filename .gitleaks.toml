@@ -1,0 +1,13 @@
+# gitleaks configuration for CoinTracker.
+# Extends the built-in ruleset and allowlists the synthetic credential
+# fixtures used in the test suite (these are fake, not real secrets).
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Synthetic credential fixtures used in tests (not real secrets)"
+regexTarget = "match"
+regexes = [
+  '''(my_api_key|my_api_secret|key_one|key_two|secret_one|secret_two|test_api_key|test_api_secret)_(12345678|87654321)''',
+]

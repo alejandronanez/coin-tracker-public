@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:15
+    container_name: coin_tracker_dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: coin_tracker_dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - coin_tracker_dev_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  db-test:
+    image: postgres:15
+    container_name: coin_tracker_test
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: coin_tracker_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - coin_tracker_test_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+volumes:
+  coin_tracker_dev_postgres_data:
+    driver: local
+  coin_tracker_test_postgres_data:
+    driver: local

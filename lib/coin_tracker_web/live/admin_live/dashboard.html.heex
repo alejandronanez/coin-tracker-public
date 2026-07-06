@@ -1,0 +1,174 @@
+<Layouts.app
+  flash={@flash}
+  current_scope={@current_scope}
+  page_title={@page_title}
+  current_path={@current_path}
+>
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+        {gettext("Admin Dashboard")}
+      </h1>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        {gettext("Welcome back, %{email}", email: @current_scope.user.email)}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="bg-white dark:bg-gray-800 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <div class="p-5">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <.icon name="hero-users" class="size-8 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div class="ml-5 w-0 flex-1">
+              <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">
+                  {gettext("Total Users")}
+                </dt>
+                <dd class="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {@stats.total_users}
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <div class="p-5">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <.icon name="hero-star" class="size-8 text-yellow-600 dark:text-yellow-400" />
+            </div>
+            <div class="ml-5 w-0 flex-1">
+              <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">
+                  {gettext("Active Subscriptions")}
+                </dt>
+                <dd class="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {@stats.active_subscriptions}
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <div class="p-5">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <.icon name="hero-chart-bar" class="size-8 text-green-600 dark:text-green-400" />
+            </div>
+            <div class="ml-5 w-0 flex-1">
+              <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">
+                  {gettext("Total Positions")}
+                </dt>
+                <dd class="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {@stats.total_positions}
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <div class="p-5">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <.icon name="hero-bell" class="size-8 text-purple-600 dark:text-purple-400" />
+            </div>
+            <div class="ml-5 w-0 flex-1">
+              <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400 truncate">
+                  {gettext("Total Signals")}
+                </dt>
+                <dd class="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {@stats.total_signals}
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+        {gettext("Quick Actions")}
+      </h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <.link
+          navigate={~p"/admin/users"}
+          class="group relative bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+        >
+          <div>
+            <div class="flex items-center justify-center size-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-4">
+              <.icon name="hero-users" class="size-6 text-blue-600 dark:text-blue-400" />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+              {gettext("Users Management")}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              {gettext("View and manage all user accounts, subscriptions, and permissions")}
+            </p>
+          </div>
+        </.link>
+
+        <.link
+          navigate={~p"/admin/positions"}
+          class="group relative bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-400 transition-colors"
+        >
+          <div>
+            <div class="flex items-center justify-center size-12 bg-green-100 dark:bg-green-900/30 rounded-lg mb-4">
+              <.icon name="hero-chart-bar" class="size-6 text-green-600 dark:text-green-400" />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">
+              {gettext("Positions Management")}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              {gettext("Monitor and manage all trading positions across the platform")}
+            </p>
+          </div>
+        </.link>
+
+        <.link
+          navigate={~p"/admin/signals"}
+          class="group relative bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-colors"
+        >
+          <div>
+            <div class="flex items-center justify-center size-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg mb-4">
+              <.icon name="hero-bell" class="size-6 text-purple-600 dark:text-purple-400" />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
+              {gettext("Signals Management")}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              {gettext("View and manage cryptocurrency signals and alerts")}
+            </p>
+          </div>
+        </.link>
+
+        <.link
+          navigate={~p"/admin/payments"}
+          class="group relative bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-amber-500 dark:hover:border-amber-400 transition-colors"
+        >
+          <div>
+            <div class="flex items-center justify-center size-12 bg-amber-100 dark:bg-amber-900/30 rounded-lg mb-4">
+              <.icon name="hero-credit-card" class="size-6 text-amber-600 dark:text-amber-400" />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">
+              {gettext("Payments Management")}
+            </h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              {gettext("Review and process payment requests for Pro subscriptions")}
+            </p>
+          </div>
+        </.link>
+      </div>
+    </div>
+  </div>
+</Layouts.app>
