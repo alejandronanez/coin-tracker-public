@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="220" viewBox="0 0 820 220" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#161e2e"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="820" height="220" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="818" height="218" rx="17" fill="none" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Coin icon -->
+  <circle cx="64" cy="110" r="36" fill="url(#green)"/>
+  <text x="64" y="122" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#052e1b">₿</text>
+
+  <!-- Label -->
+  <text x="124" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#94a3b8" letter-spacing="3" font-weight="600">CÓDIGO DE REFERIDO · 1 MES GRATIS</text>
+
+  <!-- Code box -->
+  <rect x="124" y="92" width="280" height="76" rx="14" fill="#10b981" fill-opacity="0.10" stroke="#10b981" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="264" y="146" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="46" font-weight="800" fill="#34d399" filter="url(#glow)">WMG2XT</text>
+
+  <!-- Right side -->
+  <text x="440" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#e2e8f0">CoinScanX</text>
+  <text x="440" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8">Usa el código al registrarte</text>
+  <text x="440" y="166" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="14" fill="#64748b">coinscanx.com/?ref=WMG2XT</text>
+</svg>

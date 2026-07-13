@@ -1,11 +1,15 @@
 # CoinTracker
 
+[![CoinScanX — referral code WMG2XT, 1 month free](docs/screenshots/referral-banner.en.svg)](https://coinscanx.com/?ref=WMG2XT)
+
 > [!TIP]
 > **Support the project — and get a free month.** CoinTracker is free and open
 > source, but the app needs a [CoinScanX](https://coinscanx.com/?ref=WMG2XT) API
 > key to fetch signals, so you'll need a CoinScanX account regardless. Sign up
-> via this **referral link** and you get **one month free** — the maintainer gets
-> one too. A zero-cost way to say thanks for the open-source release.
+> with referral code **`WMG2XT`** at
+> [coinscanx.com/?ref=WMG2XT](https://coinscanx.com/?ref=WMG2XT) and you get
+> **one month free** — the maintainer gets one too. A zero-cost way to say thanks
+> for the open-source release.
 
 > **Docs:** **English** · [Español](README.md)
 

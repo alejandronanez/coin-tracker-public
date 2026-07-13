@@ -1,12 +1,15 @@
 # CoinTracker
 
+[![CoinScanX — código de referido WMG2XT, 1 mes gratis](docs/screenshots/referral-banner.es.svg)](https://coinscanx.com/?ref=WMG2XT)
+
 > [!TIP]
 > **Apoya el proyecto — y consigue un mes gratis.** CoinTracker es gratuito y de
 > código abierto, pero la app necesita una API key de
 > [CoinScanX](https://coinscanx.com/?ref=WMG2XT) para obtener señales, así que
-> necesitarás una cuenta de CoinScanX de todos modos. Regístrate con este
-> **enlace de referido** y obtienes **un mes gratis** — el maintainer también.
-> Una forma de coste cero de agradecer el lanzamiento open-source.
+> necesitarás una cuenta de CoinScanX de todos modos. Regístrate con el código de
+> referido **`WMG2XT`** en [coinscanx.com/?ref=WMG2XT](https://coinscanx.com/?ref=WMG2XT)
+> y obtienes **un mes gratis** — el maintainer también. Una forma de coste cero
+> de agradecer el lanzamiento open-source.
 
 > **Documentación:** [English](README.en.md) · **Español**
 
