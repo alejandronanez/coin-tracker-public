@@ -1,143 +1,180 @@
 # CoinTracker
 
 > [!TIP]
-> **Support the project — and get a free month.** CoinTracker is free and open
-> source, but the app needs a [CoinScanX](https://coinscanx.com/?ref=WMG2XT) API
-> key to fetch signals, so you'll need a CoinScanX account regardless. Sign up
-> via this **referral link** and you get **one month free** — the maintainer gets
-> one too. A zero-cost way to say thanks for the open-source release.
+> **Apoya el proyecto — y consigue un mes gratis.** CoinTracker es gratuito y de
+> código abierto, pero la app necesita una API key de
+> [CoinScanX](https://coinscanx.com/?ref=WMG2XT) para obtener señales, así que
+> necesitarás una cuenta de CoinScanX de todos modos. Regístrate con este
+> **enlace de referido** y obtienes **un mes gratis** — el maintainer también.
+> Una forma de coste cero de agradecer el lanzamiento open-source.
 
-> **Docs:** **English** · [Español](README.es.md)
+> **Documentación:** [English](README.en.md) · **Español**
 
-**Know when to buy. Know when to sell.** CoinTracker surfaces on-chain crypto
-signals, tracks your positions, and pings you on Telegram when it's time to act —
-so you can trade with conviction instead of FOMO.
+**Sabes cuándo comprar. Sabes cuándo vender.** CoinTracker revela señales
+cripto on-chain, sigue tus posiciones y te avisa por Telegram cuando es momento
+de actuar — para que operes con convicción en lugar de FOMO.
 
-> **Not financial advice.** CoinTracker is an open-source tool that aggregates and
-> displays on-chain data and market indicators. Nothing here is investment
-> advice. Do your own research; you are responsible for your own trades.
+> **No es asesoría financiera.** CoinTracker es una herramienta de código
+> abierto que agrega y muestra datos on-chain e indicadores de mercado. Nada
+> aquí constituye asesoría de inversión. Haz tu propia investigación; tú eres
+> responsable de tus propias operaciones.
 
 ---
 
-## Features
+## Galería
 
-- **On-chain signals** — high-probability setups derived from blockchain data and
-  market indicators, ingested from [CoinScanX](https://coinscanx.com/?ref=WMG2XT).
-- **Position tracking** — log entries, targets, and stop-losses; see P&L at a
-  glance on open and closed positions.
-- **Telegram alerts** — get notified the moment a coin shows bullish activity, or
-  when your positions hit thresholds/stop-loss. Market-status changes too.
-- **Market status** — a rolling view of whether the market is bullish, bearish, or
-  ranging, with a 30-day chart to time your strategy.
-- **Historical signals** — browse every signal ever called, with entry/peak/exit
-  prices. The track record is public, no signup required.
-- **Exchange integration** — store your Binance API keys (encrypted at rest with
-  [Cloak](https://github.com/danielberkompas/cloak)) to enable one-click trading
-  from a signal.
-- **Admin panel** — [Backpex](https://backpex.live)-powered dashboard for managing
-  users, positions, and signals.
+### Homepage — Top 10 señales
+![Homepage mostrando el Top 10 de señales](docs/screenshots/homepage-top-10.png)
 
-## Tech stack
+### Homepage — Período de gracia
+![Homepage mostrando el período de gracia](docs/screenshots/homepage-periodo-gracia.png)
 
-[Elixir](https://elixir-lang.org) 1.15+ · [Phoenix](https://phoenixframework.org) 1.8 ·
-[LiveView](https://hexdocs.pm/phoenix_live_view) · [Ecto](https://hexdocs.pm/ecto) /
-PostgreSQL · [Tailwind CSS](https://tailwindcss.com) + [daisyUI](https://daisyui.com) ·
-[Req](https://hexdocs.pm/req) (HTTP) · [ex_gram](https://hexdocs.pm/ex_gram) (Telegram) ·
-[Swoosh](https://hexdocs.pm/swoosh) + [Resend](https://resend.com) (email) ·
-[Bandit](https://github.com/mtrikel/bandit) webserver.
+### Estado del mercado
+![Vista de estado del mercado con gráfico de 30 días](docs/screenshots/estado-del-mercado.png)
 
-## Prerequisites
+### Posiciones
+![Lista de posiciones abiertas y cerradas](docs/screenshots/posiciones.png)
 
-- **Elixir 1.15+** (verified on 1.19.5 / OTP 28) and **Erlang/OTP** — check with
-  `elixir --version`
-- **PostgreSQL 15+** — easiest via Docker (see Quick start)
-- **Node.js 18+** (verified on v22) and npm (for JS asset deps like Chart.js)
-- **Mix** (ships with Elixir)
+### P&L de posiciones
+![P&L de las posiciones](docs/screenshots/pnl-posiciones.png)
 
-## Quick start
+### Señales históricas
+![Histórico de señales con precios de entrada/pico/salida](docs/screenshots/historical.png)
+
+### Orden OCO en Binance
+![Integración de trading: orden OCO en Binance desde una señal](docs/screenshots/orden-oco-binance.png)
+
+---
+
+## Funciones
+
+- **Señales on-chain** — configuraciones de alta probabilidad derivadas de datos
+  de blockchain e indicadores de mercado, ingeridas desde
+  [CoinScanX](https://coinscanx.com/?ref=WMG2XT).
+- **Seguimiento de posiciones** — registra entradas, objetivos y stop-losses;
+  ve el P&L de un vistazo en posiciones abiertas y cerradas.
+- **Alertas de Telegram** — recibe notificaciones al momento cuando una moneda
+  muestra actividad alcista, o cuando tus posiciones alcanzan
+  umbrales/stop-loss. También cambios de estado del mercado.
+- **Estado del mercado** — una vista continua de si el mercado está alcista,
+  bajista o lateral, con un gráfico de 30 días para sincronizar tu estrategia.
+- **Señales históricas** — explora cada señal que se haya llamado, con precios
+  de entrada/pico/salida. El historial es público, sin necesidad de registro.
+- **Integración con exchange** — guarda tus claves API de Binance (cifradas en
+  reposo con [Cloak](https://github.com/danielberkompas/cloak)) para habilitar
+  trading con un clic desde una señal.
+- **Panel de administración** — tablero impulsado por
+  [Backpex](https://backpex.live) para gestionar usuarios, posiciones y señales.
+
+## Stack técnico
+
+[Elixir](https://elixir-lang.org) 1.15+ · [Phoenix](https://phoenixframework.org)
+1.8 · [LiveView](https://hexdocs.pm/phoenix_live_view) ·
+[Ecto](https://hexdocs.pm/ecto) / PostgreSQL ·
+[Tailwind CSS](https://tailwindcss.com) + [daisyUI](https://daisyui.com) ·
+[Req](https://hexdocs.pm/req) (HTTP) · [ex_gram](https://hexdocs.pm/ex_gram)
+(Telegram) · [Swoosh](https://hexdocs.pm/swoosh) + [Resend](https://resend.com)
+(correo) · servidor web [Bandit](https://github.com/mtrikel/bandit).
+
+## Requisitos previos
+
+- **Elixir 1.15+** (verificado en 1.19.5 / OTP 28) y **Erlang/OTP** — verifica
+  con `elixir --version`
+- **PostgreSQL 15+** — lo más fácil vía Docker (ver Inicio rápido)
+- **Node.js 18+** (verificado en v22) y npm (para deps de activos JS como
+  Chart.js)
+- **Mix** (incluido con Elixir)
+
+## Inicio rápido
 
 ```bash
-# 1. Clone and enter the repo
-git clone <your-fork-url> coin_tracker
+# 1. Clona y entra al repo
+git clone <url-de-tu-fork> coin_tracker
 cd coin_tracker
 
-# 2. Start a Postgres instance (dev on :5432, test on :5433)
+# 2. Inicia una instancia de Postgres (dev en :5432, test en :5433)
 docker compose up -d
 
-# 3. Copy the env template and generate the two crypto secrets
+# 3. Copia la plantilla de entorno y genera los dos secretos criptográficos
 cp .env.example .env
-mix phx.gen.secret            # -> paste into SECRET_KEY_BASE
-mix phx.gen.secret 32         # -> paste into LIVE_VIEW_SIGNING_SALT
+mix phx.gen.secret            # -> pégalo en SECRET_KEY_BASE
+mix phx.gen.secret 32         # -> pégalo en LIVE_VIEW_SIGNING_SALT
 
-# 4. Load the env into your shell (do this in every new terminal)
+# 4. Carga el env en tu shell (haz esto en cada nueva terminal)
 set -a; source .env; set +a
 
-# 5. Install deps, JS deps, create + migrate the DB, build assets
+# 5. Instala deps, deps JS, crea + migra la BD, construye activos
 mix setup
 
-# 6. Boot the server
+# 6. Arranca el servidor
 mix phx.server
 ```
 
-Now visit **http://localhost:4000**. You should see the landing page. Click
-**Get Started** to register an account and start tracking positions.
+Ahora visita **http://localhost:4000**. Deberías ver la página de inicio. Haz
+clic en **Comenzar** para registrar una cuenta y empezar a seguir posiciones.
 
-> The `mix setup` alias runs `deps.get`, `npm install` (in `assets/`), `ecto.setup`
-> (create + migrate + seed), and `assets.setup`/`assets.build`. The seeds populate
-> 30 days of synthetic market-status data so the chart isn't empty.
+> El alias `mix setup` ejecuta `deps.get`, `npm install` (en `assets/`),
+> `ecto.setup` (crear + migrar + sembrar) y `assets.setup`/`assets.build`. Las
+> semillas pueblan 30 días de datos sintéticos de estado del mercado para que
+> el gráfico no esté vacío.
 
-### Don't have Docker?
+### ¿No tienes Docker?
 
-Any PostgreSQL 15+ instance works. The dev config
-(`config/dev.exs`) connects to `postgres:postgres@localhost:5432/coin_tracker_dev`,
-and test uses `localhost:5433/coin_tracker_test`. Point those at your own server,
-or override `DATABASE_URL` in `.env` and adjust `config/dev.exs` accordingly.
+Cualquier instancia de PostgreSQL 15+ funciona. La configuración de dev
+(`config/dev.exs`) se conecta a
+`postgres:postgres@localhost:5432/coin_tracker_dev`, y test usa
+`localhost:5433/coin_tracker_test`. Apunta esos a tu propio servidor, o anula
+`DATABASE_URL` en `.env` y ajusta `config/dev.exs` según corresponda.
 
-## New user walkthrough
+## Recorrido para nuevos usuarios
 
-The first-run experience has a few non-obvious steps. Here's what to expect,
-verified by driving the app with browser automation on a fresh setup.
+La experiencia de primer uso tiene algunos pasos no obvios. Esto es lo que
+esperar, verificado conduciendo la app con automatización de navegador en una
+instalación limpia.
 
-### 1. Registration is passwordless (magic link)
+### 1. El registro es sin contraseña (magic link)
 
-The signup form at `/users/register` asks for **email only** — no password.
-After you click **Create an account**, you're redirected to the log-in page and
-a confirmation email is sent. In development, Swoosh uses the local mailbox
-adapter instead of a real SMTP server, so you pick up the email at
-**http://localhost:4000/dev/mailbox**. Open the confirmation email, click the
-magic link inside, then press **Confirm and stay logged in**. You're now
-authenticated and redirected to `/upgrade`.
+El formulario de registro en `/users/register` pide **solo el correo** — sin
+contraseña. Tras hacer clic en **Crear una cuenta**, se te redirige a la página
+de inicio de sesión y se envía un correo de confirmación. En desarrollo, Swoosh
+usa el adaptador de buzón local en lugar de un servidor SMTP real, así que
+recoges el correo en
+**http://localhost:4000/dev/mailbox**. Abre el correo de confirmación, haz clic
+en el magic link dentro, luego presiona **Confirmar y mantener la sesión
+iniciada**. Ahora estás autenticado y redirigido a `/upgrade`.
 
-### 2. Most features are behind a Pro tier gate
+### 2. La mayoría de funciones están tras una barrera de nivel Pro
 
-After registering you start on the **free** tier. The router gates the two
-headline features behind `require_pro_subscription`:
+Tras registrarte empiezas en el plan **gratuito**. El router protege las dos
+funciones principales detrás de `require_pro_subscription`:
 
-| Route | Access | What you see |
-|-------|--------|--------------|
-| `/signals`, `/signals/:id` | **Pro only** | Redirects to `/upgrade` |
-| `/market-status` | **Pro only** | Redirects to `/upgrade` |
-| `/admin`, `/admin/users`, `/admin/positions`, `/admin/signals` | **Admin only** (Backpex panel) | Manage users, positions, signals; flip subscription tiers |
-| `/positions`, `/positions/new` | Free (auth required) | Open/closed position tracking |
-| `/historical`, `/historical/:symbol` | Free (public) | Every signal ever called |
-| `/tutorial` | Free (auth required) | Step-by-step getting started guide |
-| `/users/settings`, `/settings/exchange-keys` | Free (auth required) | Account + Binance API key management |
-| `/upgrade` | Free (public) | Pricing page (free) / subscription status (pro) |
+| Ruta | Acceso | Qué ves |
+|------|--------|---------|
+| `/signals`, `/signals/:id` | **Solo Pro** | Redirige a `/upgrade` |
+| `/market-status` | **Solo Pro** | Redirige a `/upgrade` |
+| `/admin`, `/admin/users`, `/admin/positions`, `/admin/signals` | **Solo Admin** (panel Backpex) | Gestiona usuarios, posiciones, señales; cambia niveles de suscripción |
+| `/positions`, `/positions/new` | Gratuito (auth requerida) | Seguimiento de posiciones abiertas/cerradas |
+| `/historical`, `/historical/:symbol` | Gratuito (público) | Cada señal que se haya llamado |
+| `/tutorial` | Gratuito (auth requerida) | Guía paso a paso de inicio |
+| `/users/settings`, `/settings/exchange-keys` | Gratuito (auth requerida) | Gestión de cuenta + claves API de Binance |
+| `/upgrade` | Gratuito (público) | Página de precios (gratuito) / estado de suscripción (pro) |
 
-### 3. Activating Pro for local development
+### 3. Activar Pro para desarrollo local
 
-The USDT TRC-20 payment system that originally upgraded users was removed for
-this public release, so **there is no self-serve payment path in the UI**. Two
-ways to unlock `/signals` and `/market-status` locally:
+El sistema de pagos USDT TRC-20 que originalmente actualizaba a los usuarios se
+eliminó para este lanzamiento público, así que **no hay ruta de pago
+autoservicio en la UI**. Dos formas de desbloquear `/signals` y
+`/market-status` localmente:
 
-**Option A — promote yourself via the admin panel (recommended once seeded).**
-The first admin must be promoted by hand (see Option B), but after that the
-Backpex admin panel at `/admin/users` lets an admin flip any user's
-**Subscription Tier** (Free/Pro/Admin) and **Subscription Expires At** directly
-from the UI — no code needed.
+**Opción A — ascéndete vía el panel de administración (recomendado tras
+sembrar).** El primer admin debe ser ascendido a mano (ver Opción B), pero
+después el panel admin de Backpex en `/admin/users` permite a un admin cambiar
+el **nivel de suscripción** (Gratis/Pro/Admin) y **Subscription Expires At** de
+cualquier usuario directamente desde la UI — sin código.
 
-**Option B — promote the first user by hand (Elixir eval).** Bootstrap the first
-admin from an `iex`/`mix run` eval, then use the admin panel for everyone else:
+**Opción B — asciende al primer usuario a mano (Elixir eval).** Arranca el
+primer admin desde un eval `iex`/`mix run`, luego usa el panel admin para los
+demás:
 
 ```bash
 set -a; source .env; set +a
@@ -148,166 +185,177 @@ mix run -e '
 '
 ```
 
-For a non-admin Pro upgrade from code, use
-`Accounts.activate_pro_subscription(user, expires_at)` instead. Fork operators
-wiring a real payment provider should call it from their checkout handler — the
-gating logic is unchanged and ready to receive a new payment source. See
-`docs/contexts.md` for details.
+Para un ascenso Pro no-admin desde código, usa
+`Accounts.activate_pro_subscription(user, expires_at)` en su lugar. Los
+operadores de forks que conecten un proveedor de pagos real deberían llamarlo
+desde su handler de checkout — la lógica de barrera no cambia y está lista para
+recibir una nueva fuente de pagos. Ver `docs/contexts.md` para detalles.
 
-### 4. Data provider keys are mandatory for signals
+### 4. Las claves del proveedor de datos son obligatorias para las señales
 
-Even with Pro active, `/signals` will be **empty** without a valid
-`COINSCANX_API_KEY`. The poller logs `Coinscan API request failed with status
-401` on every fetch and skips ingestion. You can verify a key is valid before
-wiring it in:
+Incluso con Pro activo, `/signals` estará **vacía** sin un
+`COINSCANX_API_KEY` válido. El poller registra `Coinscan API request failed
+with status 401` en cada fetch y omite la ingesta. Puedes verificar que una
+clave sea válida antes de conectarla:
 
 ```bash
 curl -s -o /dev/null -w "%{http_code}\n" \
   -H "Authorization: Bearer $COINSCANX_API_KEY" \
   "https://api.coinscanx.com/v3/top10"
-# 200 = valid, 401 = invalid/expired
+# 200 = válida, 401 = inválida/expirada
 ```
 
-Once a valid key is loaded, the poller ingests within ~45 seconds (the dev
-interval) and `/signals` populates the Top 10 performers table with live
-Binance prices and sparkline charts.
+Una vez cargada una clave válida, el poller ingiere en ~45 segundos (el
+intervalo de dev) y `/signals` llena la tabla del Top 10 con precios en vivo de
+Binance y gráficos sparkline.
 
-### 5. Dev mailbox for email-based flows
+### 5. Buzón de desarrollo para flujos basados en correo
 
-Any transactional email (confirmation, email change, password reset) lands in
-the Swoosh dev mailbox at **http://localhost:4000/dev/mailbox**. Each email gets
-its own page with the magic link inside. This is how you complete the
-registration flow and any future email-confirming actions in development.
+Cualquier correo transaccional (confirmación, cambio de correo, restablecimiento
+de contraseña) llega al buzón de desarrollo de Swoosh en
+**http://localhost:4000/dev/mailbox**. Cada correo tiene su propia página con
+el magic link dentro. Así es como completas el flujo de registro y cualquier
+acción futura que confirme correo en desarrollo.
 
-## Environment variables
+## Variables de entorno
 
-This app uses **strict, environment-variable-based configuration** — there are no
-secret or deployment-identity values committed to the repo, and the app
-**refuses to boot** if a required variable is missing. Load `.env` into your shell
-before any command that boots the app (`mix phx.server`, `mix test`, ecto tasks):
+Esta app usa **configuración estricta basada en variables de entorno** — no hay
+secretos ni valores de identidad de despliegue comprometidos al repo, y la app
+**se niega a arrancar** si falta una variable requerida. Carga `.env` en tu
+shell antes de cualquier comando que arranque la app (`mix phx.server`, `mix
+test`, tareas ecto):
 
 ```bash
 set -a; source .env; set +a
 ```
 
-See [`.env.example`](.env.example) for the full list. Summary:
+Ver [`.env.example`](.env.example) para la lista completa. Resumen:
 
-| Variable | Required in | Purpose |
-|----------|-------------|---------|
-| `SECRET_KEY_BASE` | all envs | Phoenix signing secret (`mix phx.gen.secret`) |
-| `LIVE_VIEW_SIGNING_SALT` | all envs | LiveView signing salt (`mix phx.gen.secret 32`) |
-| `APP_NAME` | all envs | Brand name shown in the UI and outgoing email |
-| `SENDER_EMAIL` | all envs | From-address for transactional email |
-| `SUPPORT_EMAIL` | all envs | Shown in the UI contact link |
-| `ADMIN_NOTIFICATION_EMAIL` | all envs | Where admin alerts are sent |
-| `DATABASE_URL` | prod only | Ecto repo URL (dev/test use `config/*.exs` defaults) |
-| `PHX_HOST` | prod only | Public hostname for URLs/origins |
-| `RESEND_API_KEY` | prod only | Resend API key for sending email |
+| Variable | Requerida en | Propósito |
+|----------|--------------|-----------|
+| `SECRET_KEY_BASE` | todos los envs | Secreto de firma de Phoenix (`mix phx.gen.secret`) |
+| `LIVE_VIEW_SIGNING_SALT` | todos los envs | Salt de firma de LiveView (`mix phx.gen.secret 32`) |
+| `APP_NAME` | todos los envs | Nombre de marca mostrado en la UI y correo saliente |
+| `SENDER_EMAIL` | todos los envs | Dirección From para correo transaccional |
+| `SUPPORT_EMAIL` | todos los envs | Mostrado en el enlace de contacto de la UI |
+| `ADMIN_NOTIFICATION_EMAIL` | todos los envs | A dónde se envían alertas admin |
+| `DATABASE_URL` | solo prod | URL del repo Ecto (dev/test usan defaults de `config/*.exs`) |
+| `PHX_HOST` | solo prod | Hostname público para URLs/orígenes |
+| `RESEND_API_KEY` | solo prod | Clave API de Resend para enviar correo |
 
-### Required for the app to function (data providers)
+### Requeridas para que la app funcione (proveedores de datos)
 
-> **These are not optional.** Without `COINSCANX_API_KEY` the signal poller
-> errors on every fetch and `/signals` stays empty — the app boots but has no
-> product. Without `COINGECKO_API_KEY` the CoinGecko client falls back to the
-> anonymous endpoint, which 429s under real use and breaks live price enrichment.
-> Get these set before you expect any data to flow.
+> **Estas no son opcionales.** Sin `COINSCANX_API_KEY` el poller de señales
+> falla en cada fetch y `/signals` permanece vacía — la app arranca pero no
+> tiene producto. Sin `COINGECKO_API_KEY` el cliente de CoinGecko cae al
+> endpoint anónimo, que devuelve 429 bajo uso real y rompe el enriquecimiento
+> de precios en vivo. Configura estas antes de esperar que fluya cualquier
+> dato.
 
-| Variable | Where to get it | Notes |
+| Variable | Dónde obtenerla | Notas |
 |----------|-----------------|-------|
-| `COINSCANX_API_KEY` | [CoinScanX](https://coinscanx.com/?ref=WMG2XT) account dashboard | Sent as a Bearer token; the whole signals pipeline depends on it |
-| `COINGECKO_API_KEY` | [CoinGecko](https://www.coingecko.com) API dashboard | A free demo key works; sets the `x-cg-demo-api-key` header |
+| `COINSCANX_API_KEY` | Panel de cuenta de [CoinScanX](https://coinscanx.com/?ref=WMG2XT) | Se envía como Bearer token; todo el pipeline de señales depende de ello |
+| `COINGECKO_API_KEY` | Panel de API de [CoinGecko](https://www.coingecko.com) | Una clave demo gratuita funciona; establece el header `x-cg-demo-api-key` |
 
-### Optional integrations (degrade gracefully if unset)
+### Integraciones opcionales (se degradan con gracia si no se establecen)
 
-| Variable | Where to get it |
+| Variable | Dónde obtenerla |
 |----------|-----------------|
-| `TELEGRAM_BOT_TOKEN` | Create a bot via [@BotFather](https://t.me/BotFather) on Telegram |
+| `TELEGRAM_BOT_TOKEN` | Crea un bot vía [@BotFather](https://t.me/BotFather) en Telegram |
 
-> **Note:** with `TELEGRAM_BOT_TOKEN` empty you'll see periodic `404` lines in the
-> logs from the bot polling Telegram. That's expected — the app keeps running and
-> all non-Telegram features work fine.
+> **Nota:** con `TELEGRAM_BOT_TOKEN` vacío verás líneas `404` periódicas en los
+> logs del bot sondeando Telegram. Es esperado — la app sigue corriendo y todas
+> las funciones que no son de Telegram funcionan bien.
 
-> **Security note (dev only):** the Tesla HTTP middleware logs full request URLs
-> at `debug` level, which include the Telegram bot token in plaintext
-> (`POST https://api.telegram.org/bot<TOKEN>/...`). This is dev-only
-> (`config/dev.exs`) and never reaches production, but be mindful if you share
-> terminal output or paste logs into issues. Lower the log level with
-> `Logger.configure(level: :info)` in IEx to suppress it.
+> **Nota de seguridad (solo dev):** el middleware HTTP de Tesla registra URLs
+> completas de petición a nivel `debug`, lo que incluye el token del bot de
+> Telegram en texto plano
+> (`POST https://api.telegram.org/bot<TOKEN>/...`). Esto es solo dev
+> (`config/dev.exs`) y nunca llega a producción, pero ten cuidado si compartes
+> salida de terminal o pegas logs en issues. Baja el nivel de log con
+> `Logger.configure(level: :info)` en IEx para suprimirlo.
 
-## Testing
+## Pruebas
 
 ```bash
 set -a; source .env; set +a
 mix test
 ```
 
-The test DB lives on port **5433** (the `db-test` service in `docker-compose.yml`).
-`mix test` auto-creates and migrates it. The suite runs ~940 tests.
+La BD de test vive en el puerto **5433** (el servicio `db-test` en
+`docker-compose.yml`). `mix test` la crea y migra automáticamente. La suite
+ejecuta ~940 pruebas.
 
-> **Known issue:** two tests in `test/coin_tracker_web/live/upgrade_live_test.exs`
-> reference a `/upgrade/payment` route that was removed when the USDT payments
-> context was stripped for the public release. They fail with a
-> `FunctionClauseError` rather than the expected `NoRouteError`. Safe to fix when
-> you touch that area.
+> **Problema conocido:** dos pruebas en
+> `test/coin_tracker_web/live/upgrade_live_test.exs` referencian una ruta
+> `/upgrade/payment` que se eliminó cuando el contexto de pagos USDT se quitó
+> para el lanzamiento público. Fallan con un `FunctionClauseError` en lugar del
+> `NoRouteError` esperado. Seguro de arreglar cuando toques esa área.
 
-## Architecture
+## Arquitectura
 
-The codebase follows Phoenix **context modules** — each domain (`Accounts`,
-`Coins`, `Trading`, `Signals`) owns its schemas and public API. Business logic
-lives in contexts; `CoinTrackerWeb` only orchestrates and renders.
+El códigobase sigue **módulos de contexto** de Phoenix — cada dominio
+(`Accounts`, `Coins`, `Trading`, `Signals`) posee sus esquemas y API pública.
+La lógica de negocio vive en los contextos; `CoinTrackerWeb` solo orquesta y
+renderiza.
 
-Key decisions worth reading before extending the app:
+Decisiones clave que vale la pena leer antes de extender la app:
 
-- [`docs/contexts.md`](docs/contexts.md) — full catalog of contexts, schemas, and public functions
-- [`docs/context-vs-orchestration.md`](docs/context-vs-orchestration.md) — why `TelegramService` is generic and callers decide who/when
-- [`docs/signal-snapshots.md`](docs/signal-snapshots.md) — signal vs snapshot data, and deduplication
-- [`docs/market-status-poller.md`](docs/market-status-poller.md) — the reactive poller pattern (no internal timers)
-- [`docs/telegram-alerts.md`](docs/telegram-alerts.md) — position-based threshold/stop-loss alerts
-- [`docs/dev-logging.md`](docs/dev-logging.md) — structured logging conventions
+- [`docs/contexts.md`](docs/contexts.md) — catálogo completo de contextos, esquemas y funciones públicas
+- [`docs/context-vs-orchestration.md`](docs/context-vs-orchestration.md) — por qué `TelegramService` es genérico y los callers deciden quién/cuándo
+- [`docs/signal-snapshots.md`](docs/signal-snapshots.md) — datos de señal vs snapshot, y deduplicación
+- [`docs/market-status-poller.md`](docs/market-status-poller.md) — el patrón de poller reactivo (sin timers internos)
+- [`docs/telegram-alerts.md`](docs/telegram-alerts.md) — alertas de posición basadas en umbrales/stop-loss
+- [`docs/dev-logging.md`](docs/dev-logging.md) — convenciones de logging estructurado
 
-The full list is in [`AGENTS.md`](AGENTS.md) under "Domain Documentation".
+La lista completa está en [`AGENTS.md`](AGENTS.md) bajo "Domain Documentation".
 
-### Subscription tiers
+### Niveles de suscripción
 
-There's a `free` / `pro` tier gate (`require_pro_subscription` mount, `User.active_subscription?/1`).
-The USDT TRC-20 payment system that originally upgraded users was removed for this
-public release. `Accounts.activate_pro_subscription/2` still exists, so fork
-operators can wire their own payment provider to flip the tier — the gating logic
-is unchanged. See `docs/contexts.md` for details.
+Hay una barrera de nivel `free` / `pro` (montaje `require_pro_subscription`,
+`User.active_subscription?/1`). El sistema de pagos USDT TRC-20 que
+originalmente actualizaba a los usuarios se eliminó para este lanzamiento
+público. `Accounts.activate_pro_subscription/2` sigue existiendo, así que los
+operadores de forks pueden conectar su propio proveedor de pagos para cambiar
+el nivel — la lógica de barrera no cambia. Ver `docs/contexts.md` para
+detalles.
 
-## Deployment
+## Despliegue
 
-The repo ships with a production-ready `Dockerfile` and a [`fly.toml`](fly.toml)
-for [Fly.io](https://fly.io):
+El repo incluye un `Dockerfile` listo para producción y un [`fly.toml`](fly.toml)
+para [Fly.io](https://fly.io):
 
 ```bash
-fly launch          # first time only, to create the app + a Postgres cluster
+fly launch          # solo la primera vez, para crear la app + un clúster Postgres
 fly secrets set SECRET_KEY_BASE=$(mix phx.gen.secret) \
                 LIVE_VIEW_SIGNING_SALT=$(mix phx.gen.secret 32) \
                 APP_NAME=CoinTracker \
-                SENDER_EMAIL=noreply@yourdomain.com \
-                SUPPORT_EMAIL=support@yourdomain.com \
-                ADMIN_NOTIFICATION_EMAIL=admin@yourdomain.com \
+                SENDER_EMAIL=noreply@tudominio.com \
+                SUPPORT_EMAIL=support@tudominio.com \
+                ADMIN_NOTIFICATION_EMAIL=admin@tudominio.com \
                 DATABASE_URL=... \
-                PHX_HOST=yourdomain.com \
+                PHX_HOST=tudominio.com \
                 RESEND_API_KEY=...
 fly deploy
 ```
 
-The release runs `/app/bin/migrate` on deploy (see `fly.toml`). For other targets,
-build with `mix assets.deploy && mix release` and run `bin/coin_tracker start`.
+El release ejecuta `/app/bin/migrate` al desplegar (ver `fly.toml`). Para otros
+objetivos, construye con `mix assets.deploy && mix release` y ejecuta
+`bin/coin_tracker start`.
 
-## Contributing
+## Cómo contribuir
 
-- Run `mix precommit` before pushing — it compiles with `--warning-as-errors`,
-  checks formatting, and runs the test suite.
-- Set up the git hooks once on a fresh clone: `git config core.hooksPath .githooks`
-  (this makes `git push` run `mix precommit` automatically).
-- See [`AGENTS.md`](AGENTS.md) for project conventions, Elixir/Phoenix guidelines,
-  and the OpenSpec change workflow used for feature proposals.
+- Ejecuta `mix precommit` antes de push — compila con `--warning-as-errors`,
+  revisa formato y ejecuta la suite de pruebas.
+- Configura los git hooks una vez en un clon limpio:
+  `git config core.hooksPath .githooks` (esto hace que `git push` ejecute
+  `mix precommit` automáticamente).
+- Ver [`AGENTS.md`](AGENTS.md) para convenciones del proyecto, guías de
+  Elixir/Phoenix y el flujo de cambios de OpenSpec usado para propuestas de
+  funciones.
 
-## License
+## Licencia
 
-Apache License 2.0 — see [`LICENSE`](LICENSE). You're free to use, modify,
-distribute, and ship this commercially, with attribution. Includes an explicit
-patent grant. See the license file for full terms.
+Licencia Apache 2.0 — ver [`LICENSE`](LICENSE). Eres libre de usar, modificar,
+distribuir y usar comercialmente, con atribución. Incluye una concesión de
+patentes explícita. Ver el archivo de licencia para los términos completos.
